@@ -1,30 +1,180 @@
 [
   {
     "picture": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Koi_The.jpg",
-    "name": "KOI",
-    "distance": 1200,
-    "location": "someplace A",
+    "name": "KOI THE",
+    "distance": 760,
+    "location": "สยามพารากอน",
     "price": 4,
     "menus": [
       {
-        "picture": "",
-        "name": "",
-        "price": 1000
+        "picture": "https://img.wongnai.com/p/984x0/2018/06/02/2cfccd1dcc3045a6a53f0d743870ae73.jpg",
+        "name": "Golden Bubble Milk Tea",
+        "price": 65
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2017/11/22/b787a7db2541428aadec79f97a3595b9.jpg",
+        "name": "Matcha Latte Golden Bubble",
+        "price": 70
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2017/04/11/55506825b4394cf59eb96926671a56f6.jpg",
+        "name": "Black Tea Macchiato",
+        "price": 60
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2017/04/11/5b7de029dedb44e0b5b24ad358360436.jpg",
+        "name": "Milk Tea",
+        "price": 55
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2017/09/10/1aa9d2ad952c48c794cf1ba02270e29a.jpg",
+        "name": "Matcha Macchiato",
+        "price": 60
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2017/01/17/feee02ba545f458eb8ce4eb35c981309.jpg",
+        "name": "Passion Fruit Aloe Vera",
+        "price": 80
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2016/11/18/1247fd93e9214bfa932e32cbbce38a58.jpg",
+        "name": "Ovaltine Macchiato",
+        "price": 85
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2016/11/18/abe319d7d205416c936abf8cf5ced156.jpg",
+        "name": "Honey Green Tea",
+        "price": 60
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2016/12/13/1a22f90ecebf41c0b10d38862b7bb57f.jpg",
+        "name": "Assam Black Tea",
+        "price": 45
+      },
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2017/10/08/610c29daf130439c8d612032ed8b229a.jpg",
+        "name": "Plum Green Tea",
+        "price": 60
+      }
+    ]
+  },
+
+  {
+    "picture": "http://www.pngmart.com/files/3/Starbucks-Logo-PNG-Photos.png",
+    "name": "Starbucks",
+    "distance": 500,
+    "location": "สยามวัน",
+    "price": 120,
+    "menus": [
+      {
+        "picture": "https://starbuckssecretmenu.net/wp-content/uploads/2016/07/Pokeball-Frappuccino.jpg",
+        "name": "Starbucks Pokéball Frappuccino",
+        "price": 175
+      },
+      {
+        "picture": "https://www.marketingoops.com/wp-content/uploads/2016/09/Resize-Teavana_Black_Tea_Ruby_Grapefruit_Asia-759x1024.jpg",
+        "name": "Black Tea with Ruby Grapefruit and Honey",
+        "price": 130
+      },
+      {
+        "picture": "https://www.marketingoops.com/wp-content/uploads/2016/09/Resize-Teavana_Matcha_Espresso_Fusion_Asia-759x1024-320x432.jpg",
+        "name": "Matcha & Espresso Fusion",
+        "price": 145
+      },
+      {
+        "picture": "https://www.marketingoops.com/wp-content/uploads/2016/09/Resize-Teavana_Green_Tea_with_Aloe_Asia-759x1024-320x432.jpg",
+        "name": "Iced Shaken Green Tea with Aloe and Prickly Pear",
+        "price": 130
+      },
+      {
+        "picture": "https://www.marketingoops.com/wp-content/uploads/2016/09/Resize-Teavana_Hibiscus_Tea_with_Pomegranate_Asia-759x1024.jpg",
+        "name": "Iced Shaken Hibiscus Tea with Pomegranate Pearls",
+        "price": 130
+      },
+      {
+        "picture": "https://dutno.files.wordpress.com/2017/04/25600709-img_6082.jpg",
+        "name": "Greentea Frappuchino",
+        "price": 140
+      },
+      {
+        "picture": "https://dutno.files.wordpress.com/2017/04/811.jpg?w=1140",
+        "name": "Caramel Frappuchino",
+        "price": 155
+      },
+      {
+        "picture": "https://static5-th.orstatic.com/userphoto/Article/0/1C/0009I50EE6B70FAD4C1910j.jpg",
+        "name": "Oreo Frapuccino",
+        "price": 145
+      },
+      {
+        "picture": "https://static5-th.orstatic.com/userphoto/Article/0/1C/0009I3BA7C1A075B08131Aj.jpg",
+        "name": "Nutella Frappuccino",
+        "price": 160
+      },
+      {
+        "picture": "https://static5-th.orstatic.com/userphoto/Article/0/1C/0009I7E4FD29755BB017D7j.jpg",
+        "name": "Cinnamon Roll Frapuccino",
+        "price": 150
       }
     ]
   },
   {
-    "picture": "http://www.pngmart.com/files/3/Starbucks-Logo-PNG-Photos.png",
-    "name": "Starbucks",
-    "distance": 200,
-    "location": "someplace B",
-    "price": 5
-  },
-  {
     "picture": "http://www.stickpng.com/assets/images/5842f062a6515b1e0ad75b15.png",
     "name": "Subway",
-    "distance": 600,
-    "location": "someplace C",
-    "price": 3
+    "distance": 300,
+    "location": "สยามเซ็นเตอร์",
+    "price": 200,
+    "menus": [
+      {
+        "picture": "http://hackthemenu.com/wp-content/uploads/2013/08/subway-pizza-sub.jpg",
+        "name": "Pizza Sub",
+        "price": 210
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-SweetOnionChickenTeriyaki.jpg",
+        "name": "Sweet Onion Chicken Teriyaki",
+        "price": 145
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-spcyital.jpg",
+        "name": "Spicy Italian",
+        "price": 135
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/allsandiwhces_cbrm_PT.jpg",
+        "name": "Chicken & Bacon Ranch Melt",
+        "price": 165
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/W2B_Subway.com_Silos_ProductMenu_234x140_Meatball_PT.jpg",
+        "name": "Meatball Marinara",
+        "price": 130
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-RoastBeef.jpg",
+        "name": "Roast Beef",
+        "price": 190
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/W2B_Subway.com_Silos_ProductMenu_234x140_Tuna_PT.jpg",
+        "name": "Classic Tuna",
+        "price": 155
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-TurkeyBreast.jpg",
+        "name": "Turkey Breast",
+        "price": 150
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/W2_Subway.com_Silo_Steak-Cheese_6In_234-140_PT.jpg",
+        "name": "Steak & Cheese",
+        "price": 165
+      },
+      {
+        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/allsandiwhces_coldcut_PT.jpg",
+        "name": "Cold Cut Combo",
+        "price": 140
+      }
+    ]
   }
 ]
