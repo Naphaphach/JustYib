@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:kcapstone/controllers/catalog.dart';
 import 'package:kcapstone/views/for-you.dart';
-import 'package:kcapstone/models/nearby.dart';
+import 'package:kcapstone/models/restaurant.dart';
 
 import 'package:http/http.dart' as http;
 
@@ -52,8 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
               })
         ],
       ),
-      body: FutureBuilder<List<Nearby>>(
-        future: Nearby.fetchPhotos(context, http.Client()),
+      body: FutureBuilder<List<Restaurant>>(
+        future: Restaurant.fetchPhotos(context, http.Client()),
         builder: (context, snapshot) {
           if (snapshot.hasError) print(snapshot.error);
 

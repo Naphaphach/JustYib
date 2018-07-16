@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/nearby.dart';
+import 'package:kcapstone/models/restaurant.dart';
 
 class CatalogList extends StatelessWidget {
-  final List<Nearby> catalog;
+  final List<Restaurant> catalog;
 
   CatalogList({Key key, this.catalog}) : super(key: key);
 

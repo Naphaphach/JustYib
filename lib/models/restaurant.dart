@@ -7,18 +7,18 @@ import 'package:http/http.dart' as http;
 
 //import 'package:flutter/material.dart';
 
-class Nearby {
+class Restaurant {
   final String picture;
   final String name;
   final int distance; // meter
   final String location;
   final int priceRate;
 
-  Nearby(
+  Restaurant(
       {this.picture, this.name, this.distance, this.location, this.priceRate});
 
-  factory Nearby.fromJson(Map<String, dynamic> json) {
-    return Nearby(
+  factory Restaurant.fromJson(Map<String, dynamic> json) {
+    return Restaurant(
       picture: json['picture'] as String,
       name: json['name'] as String,
       distance: json['distance'] as int,
@@ -27,21 +27,21 @@ class Nearby {
     );
   }
 
-  static Future<List<Nearby>> fetchPhotos(
+  static Future<List<Restaurant>> fetchPhotos(
       BuildContext context, http.Client client) async {
     Future<String> s =
         DefaultAssetBundle.of(context).loadString("resources/restaurant.json");
 
     return s.then((s) {
       // Use the compute function to run parsePhotos in a separate isolate
-      return compute(Nearby.parsePhotos, s);
+      return compute(Restaurant.parsePhotos, s);
     });
   }
 
   // A function that will convert a response body into a List<Photo>
-  static List<Nearby> parsePhotos(String responseBody) {
+  static List<Restaurant> parsePhotos(String responseBody) {
     final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
 
-    return parsed.map<Nearby>((json) => Nearby.fromJson(json)).toList();
+    return parsed.map<Restaurant>((json) => Restaurant.fromJson(json)).toList();
   }
 }
