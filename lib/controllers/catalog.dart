@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/nearby.dart';
+import 'package:kcapstone/models/nearby.dart';
 
 class CatalogList extends StatelessWidget {
   final List<Nearby> catalog;
