@@ -23,13 +23,13 @@ class CatalogList extends StatelessWidget {
               title: Text(catalog[index].name),
               subtitle: Text(catalog[index].location),
               onTap: () {
-                print("click");
+                print(index);
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
             ),
 
             /// This is the one I want to be dynamic. The more items there are the more space it takes and the less space section 3 gets.
-            height: 100.0,
+            height: 120.0,
           ),
         );
       },
