@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:kcapstone/controllers/catalog.dart';
-import 'package:kcapstone/views/for-you.dart';
 import 'package:kcapstone/models/restaurant.dart';
 
 import 'package:http/http.dart' as http;
@@ -36,64 +35,81 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-        actions: <Widget>[
-          new IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                print("Search");
-              }),
-          new IconButton(
-              icon: Icon(Icons.notifications),
-              onPressed: () {
-                print("Settings");
-              })
-        ],
-      ),
-      body: FutureBuilder<List<Restaurant>>(
-        future: Restaurant.fetchPhotos(context, http.Client()),
-        builder: (context, snapshot) {
-          if (snapshot.hasError) print(snapshot.error);
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: new AppBar(
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                // icon: Icon(Icons.home),
+                text: "Home",
+              ),
+              Tab(
+                // icon: Icon(Icons.favorite),
+                text: "For you",
+              ),
+            ],
+          ),
+          title: new Text(widget.title),
+          actions: <Widget>[
+            new IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {
+                  print("Search");
+                }),
+            new IconButton(
+                icon: Icon(Icons.notifications),
+                onPressed: () {
+                  print("Settings");
+                })
+          ],
+        ),
+        body: TabBarView(
+          children: [
+            FutureBuilder<List<Restaurant>>(
+              future: Restaurant.fetchPhotos(context, http.Client()),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) print(snapshot.error);
 
-          return snapshot.hasData
-              ? CatalogList(catalog: snapshot.data)
-              : Center(child: CircularProgressIndicator());
-        },
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: () {
-          print("Hello world");
-        },
-        tooltip: 'Current order',
-        child: new Icon(Icons.list),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      bottomNavigationBar: BottomAppBar(
-        child: new Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.home),
-              onPressed: () {
-                print("Home");
+                return snapshot.hasData
+                    ? CatalogList(catalog: snapshot.data)
+                    : Center(child: CircularProgressIndicator());
               },
             ),
-            IconButton(
-              icon: Icon(Icons.favorite),
-              onPressed: () {
-                print("Favorite");
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                print("Settings");
+            FutureBuilder<List<Restaurant>>(
+              future: Restaurant.fetchPhotos(context, http.Client()),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) print(snapshot.error);
+
+                return snapshot.hasData
+                    ? CatalogList(catalog: snapshot.data)
+                    : Center(child: CircularProgressIndicator());
               },
             ),
           ],
+        ),
+        floatingActionButton: new FloatingActionButton(
+          onPressed: () {
+            print("Hello world");
+          },
+          tooltip: 'Current order',
+          child: new Icon(Icons.list),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+        bottomNavigationBar: BottomAppBar(
+          child: new Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.settings),
+                onPressed: () {
+                  print("Settings");
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

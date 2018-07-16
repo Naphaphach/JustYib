@@ -5,8 +5,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-//import 'package:flutter/material.dart';
-
 class Restaurant {
   final String picture;
   final String name;

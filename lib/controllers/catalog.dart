@@ -16,8 +16,8 @@ class CatalogList extends StatelessWidget {
             child: ListTile(
               leading: Image.network(
                 catalog[index].picture,
-                alignment: Alignment.center,
-                height: 200.0,
+                alignment: Alignment.bottomCenter,
+                height: 400.0,
                 width: 150.0,
               ),
               title: Text(catalog[index].name),
@@ -29,7 +29,7 @@ class CatalogList extends StatelessWidget {
             ),
 
             /// This is the one I want to be dynamic. The more items there are the more space it takes and the less space section 3 gets.
-            height: 120.0,
+            height: 130.0,
           ),
         );
       },
