@@ -3,18 +3,28 @@
     "picture": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Koi_The.jpg",
     "name": "KOI",
     "distance": 1200,
-    "location": "someplace A"
+    "location": "someplace A",
+    "price": 4,
+    "menus": [
+      {
+        "picture": "",
+        "name": "",
+        "price": 1000
+      }
+    ]
   },
   {
     "picture": "http://www.pngmart.com/files/3/Starbucks-Logo-PNG-Photos.png",
     "name": "Starbucks",
     "distance": 200,
-    "location": "someplace B"
+    "location": "someplace B",
+    "price": 5
   },
   {
     "picture": "http://www.stickpng.com/assets/images/5842f062a6515b1e0ad75b15.png",
     "name": "Subway",
     "distance": 600,
-    "location": "someplace C"
+    "location": "someplace C",
+    "price": 3
   }
 ]

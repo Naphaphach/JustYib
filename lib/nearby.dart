@@ -12,8 +12,10 @@ class Nearby {
   final String name;
   final int distance; // meter
   final String location;
+  final int priceRate;
 
-  Nearby({this.picture, this.name, this.distance, this.location});
+  Nearby(
+      {this.picture, this.name, this.distance, this.location, this.priceRate});
 
   factory Nearby.fromJson(Map<String, dynamic> json) {
     return Nearby(
@@ -21,6 +23,7 @@ class Nearby {
       name: json['name'] as String,
       distance: json['distance'] as int,
       location: json['location'] as String,
+      priceRate: json['priceRate'] as int,
     );
   }
 

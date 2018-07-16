@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
           if (snapshot.hasError) print(snapshot.error);
 
           return snapshot.hasData
-              ? CatalogList(photos: snapshot.data)
+              ? CatalogList(catalog: snapshot.data)
               : Center(child: CircularProgressIndicator());
         },
       ),
