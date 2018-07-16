@@ -27,8 +27,8 @@ class Nearby {
   static Future<List<Nearby>> fetchPhotos(
       BuildContext context, http.Client client) async {
     Future<String> s =
-        DefaultAssetBundle.of(context).loadString("resources/nearby.json");
-    
+        DefaultAssetBundle.of(context).loadString("resources/restaurant.json");
+
     return s.then((s) {
       // Use the compute function to run parsePhotos in a separate isolate
       return compute(Nearby.parsePhotos, s);
