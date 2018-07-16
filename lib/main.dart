@@ -5,7 +5,7 @@ import 'package:kcapstone/models/restaurant.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:kcapstone/views/order.dart';
-import 'package:kcapstone/views/forYou.dart';
+import 'package:kcapstone/views/foryou.dart';
 import 'package:kcapstone/views/home.dart';
 
 void main() => runApp(new MyApp());
