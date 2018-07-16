@@ -9,7 +9,7 @@
       {
         "picture": "",
         "name": "",
-        "price": 1000
+        "priceRate": 1000
       }
     ]
   },
@@ -18,13 +18,13 @@
     "name": "Starbucks",
     "distance": 200,
     "location": "someplace B",
-    "price": 5
+    "priceRate": 5
   },
   {
     "picture": "http://www.stickpng.com/assets/images/5842f062a6515b1e0ad75b15.png",
     "name": "Subway",
     "distance": 600,
     "location": "someplace C",
-    "price": 3
+    "priceRate": 3
   }
 ]

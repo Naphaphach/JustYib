@@ -21,7 +21,8 @@ class CatalogList extends StatelessWidget {
                 width: 150.0,
               ),
               title: Text(catalog[index].name),
-              subtitle: Text(catalog[index].location),
+              subtitle: Text(catalog[index].location + catalog[index].priceRate.toString()),
+
               onTap: () {
                 print(index);
               },
