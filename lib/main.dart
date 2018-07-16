@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:kcapstone/views/order.dart';
 import 'package:kcapstone/views/foryou.dart';
 import 'package:kcapstone/views/home.dart';
+import 'package:kcapstone/views/setting.dart';
 
 void main() => runApp(new MyApp());
 
@@ -93,7 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
               IconButton(
                 icon: Icon(Icons.settings),
                 onPressed: () {
-                  print("Settings");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Setting()),
+                  );
                 },
               ),
             ],
