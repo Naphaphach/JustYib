@@ -4,6 +4,9 @@ import 'package:kcapstone/controllers/catalog.dart';
 import 'package:kcapstone/models/restaurant.dart';
 
 import 'package:http/http.dart' as http;
+import 'package:kcapstone/views/order.dart';
+import 'package:kcapstone/views/forYou.dart';
+import 'package:kcapstone/views/home.dart';
 
 void main() => runApp(new MyApp());
 
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'AppName'),
+      home: new MyHomePage(title: 'JustForU'),
     );
   }
 }
@@ -61,37 +64,22 @@ class _MyHomePageState extends State<MyHomePage> {
             new IconButton(
                 icon: Icon(Icons.notifications),
                 onPressed: () {
-                  print("Settings");
+                  print("Notification");
                 })
           ],
         ),
         body: TabBarView(
           children: [
-            FutureBuilder<List<Restaurant>>(
-              future: Restaurant.fetchPhotos(context, http.Client()),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) print(snapshot.error);
-
-                return snapshot.hasData
-                    ? CatalogList(catalog: snapshot.data)
-                    : Center(child: CircularProgressIndicator());
-              },
-            ),
-            FutureBuilder<List<Restaurant>>(
-              future: Restaurant.fetchPhotos(context, http.Client()),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) print(snapshot.error);
-
-                return snapshot.hasData
-                    ? CatalogList(catalog: snapshot.data)
-                    : Center(child: CircularProgressIndicator());
-              },
-            ),
+            Home(),
+            ForYou(),
           ],
         ),
         floatingActionButton: new FloatingActionButton(
           onPressed: () {
-            print("Hello world");
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Order()),
+            );
           },
           tooltip: 'Current order',
           child: new Icon(Icons.list),
