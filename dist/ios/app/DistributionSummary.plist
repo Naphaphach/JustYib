@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Runner.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>977DF1999A44953B6740F4433D0067934FCD4B2D</string>
+				<key>dateExpires</key>
+				<string>12/5/19</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>977DF1999A44953B6740F4433D0067934FCD4B2D</string>
+						<key>dateExpires</key>
+						<string>12/5/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>App.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>RT44NCJNJ3</string>
+						<key>name</key>
+						<string>Kasetsart University (Office of Computer Services)</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>977DF1999A44953B6740F4433D0067934FCD4B2D</string>
+						<key>dateExpires</key>
+						<string>12/5/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Flutter.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>RT44NCJNJ3</string>
+						<key>name</key>
+						<string>Kasetsart University (Office of Computer Services)</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>RT44NCJNJ3.com.kamontat.kcapstone</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>RT44NCJNJ3</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>RT44NCJNJ3.com.kamontat.kcapstone</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Runner.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>f95d15f3-c733-4a75-bbc3-2698b3025b2c</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.kamontat.*</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>RT44NCJNJ3</string>
+				<key>name</key>
+				<string>Kasetsart University (Office of Computer Services)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
