@@ -8,14 +8,17 @@ import 'package:http/http.dart' as http;
 class OrderModel {
   final String picture;
   final String name;
+  final String date;
+  final int price;
 
-
-  OrderModel({this.picture, this.name});
+  OrderModel({this.picture, this.name, this.date, this.price});
 
   factory OrderModel.fromJson(Map<String, dynamic> json) {
     return OrderModel(
       picture: json['picture'] as String,
       name: json['name'] as String,
+      date: json['date'] as String,
+      price: json['price'] as int
 
     );
   }
