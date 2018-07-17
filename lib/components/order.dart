@@ -25,12 +25,13 @@ class OrderController extends StatelessWidget {
               ),
               title: Text(orderModel.name),
               onTap: () {
-                Navigator.push(
+                /*Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => OrderResController(orderModel: orderModel),
                   ),
-                );
+                );*/
+                print(index);
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
             ),

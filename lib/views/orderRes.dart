@@ -10,7 +10,7 @@ class OrderRes extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Order"),
+        title: Text("My menu"),
       ),
       body: FutureBuilder<List<OrderResModel>>(
         future: OrderResModel.fetchPhotos(context, http.Client()),
