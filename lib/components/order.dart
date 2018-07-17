@@ -1,31 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/mockupData.dart';
+import 'package:kcapstone/models/order.dart';
+import 'package:kcapstone/components/orderRes.dart';
 
-class Catalogsample extends StatelessWidget {
-  final List<Sample> catalog;
+class OrderController extends StatelessWidget {
+  final List<OrderModel> catalog;
 
-  Catalogsample({Key key, this.catalog}) : super(key: key);
+  OrderController({Key key, this.catalog}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: catalog.length,
       itemBuilder: (context, index) {
+        OrderModel orderModel = catalog[index];
         return new Card(
           margin: EdgeInsets.all(10.2),
           child: new SizedBox(
             child: ListTile(
               leading: Image.network(
-                catalog[index].picture,
+                orderModel.picture,
                 alignment: Alignment.center,
                 height: 300.0,
                 width: 150.0,
               ),
-              title: Text(catalog[index].name),
-              subtitle: Text("สถานะ: " + catalog[index].status),
-
+              title: Text(orderModel.name),
               onTap: () {
-                print(index);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OrderResController(orderModel: orderModel),
+                  ),
+                );
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
             ),

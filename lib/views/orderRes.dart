@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/controllers/catalog.dart';
-import 'package:kcapstone/models/restaurant.dart';
-import 'package:kcapstone/views/Order_1.dart';
+import 'package:kcapstone/components/orderRes.dart';
+import 'package:kcapstone/models/orderRes.dart';
+
 import 'package:http/http.dart' as http;
 
 class OrderRes extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
-        title: Text("Order"),
+        title: Text("My Order"),
       ),
-      body: Order_1(),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => OrderRes()),
-          );
+      body: FutureBuilder<List<OrderResModel>>(
+        future: OrderResModel.fetchPhotos(context, http.Client()),
+        builder: (context, snapshot) {
+          if (snapshot.hasError) print(snapshot.error);
+
+          return snapshot.hasData
+              ? OrderResController(cate: snapshot.data)
+              : Center(child: CircularProgressIndicator());
         },
-        tooltip: 'Current order',
-        child: new Icon(Icons.list),
       ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BottomAppBar(
         child: Row(
