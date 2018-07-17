@@ -24,6 +24,7 @@ class OrderController extends StatelessWidget {
                 width: 150.0,
               ),
               title: Text(orderModel.name),
+              subtitle: Text(orderModel.price.toString() + '\n' + orderModel.date),
               onTap: () {
                 /*Navigator.push(
                   context,
