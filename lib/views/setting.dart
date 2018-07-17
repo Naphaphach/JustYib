@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kcapstone/views/profile.dart';
 
 class Setting extends StatefulWidget {
   @override
@@ -20,13 +21,21 @@ class _State extends State<Setting> {
           SwitchListTile(
             title: const Text('ตั้งค่าภาษา'),
             value: _lang,
-            onChanged: (bool value) { setState(() { _lang = value; }); },
+            onChanged: (bool value) {
+              setState(() {
+                _lang = value;
+              });
+            },
             secondary: const Icon(Icons.language),
           ),
           SwitchListTile(
             title: const Text('ตั้งค่าการแจ้งเตือน'),
             value: _noti,
-            onChanged: (bool value) { setState(() { _noti = value; }); },
+            onChanged: (bool value) {
+              setState(() {
+                _noti = value;
+              });
+            },
             secondary: const Icon(Icons.notifications_active),
           ),
           ListTile(
@@ -34,7 +43,10 @@ class _State extends State<Setting> {
             title: Text('แก้ไขข้อมูลส่วนตัว'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
-              
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Profile()),
+              );
             },
           ),
           ListTile(

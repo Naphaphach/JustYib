@@ -4,7 +4,7 @@
     "name": "KOI THE",
     "distance": 760,
     "location": "สยามพารากอน",
-    "price": 4,
+    "price": "$ $ $ $",
     "menus": [
       {
         "picture": "https://img.wongnai.com/p/984x0/2018/06/02/2cfccd1dcc3045a6a53f0d743870ae73.jpg",
@@ -63,7 +63,7 @@
     "name": "Starbucks",
     "distance": 500,
     "location": "สยามวัน",
-    "price": 120,
+    "price": "$ $ $ $ $",
     "menus": [
       {
         "picture": "https://starbuckssecretmenu.net/wp-content/uploads/2016/07/Pokeball-Frappuccino.jpg",
@@ -122,7 +122,7 @@
     "name": "Subway",
     "distance": 300,
     "location": "สยามเซ็นเตอร์",
-    "price": 200,
+    "price": "$ $ $",
     "menus": [
       {
         "picture": "http://hackthemenu.com/wp-content/uploads/2013/08/subway-pizza-sub.jpg",
