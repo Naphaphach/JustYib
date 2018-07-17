@@ -7,7 +7,7 @@
 	<key>manifest</key>
 	<dict>
 		<key>appURL</key>
-		<string>https://raw.githubusercontent.com/kamontat/kcapstone-final-project/master/dist/ios/app.ipa</string>
+		<string>https://github.com/kamontat/kcapstone-final-project/raw/master/dist/ios/app/Runner.ipa</string>
 		<key>displayImageURL</key>
 		<string>https://via.placeholder.com/57x57</string>
 		<key>fullSizeImageURL</key>

@@ -32,7 +32,7 @@ PODS:
 DEPENDENCIES:
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
-  - Flutter (from `.symlinks/flutter/ios`)
+  - Flutter (from `.symlinks/flutter/ios-release`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,7 +49,7 @@ EXTERNAL SOURCES:
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
-    :path: ".symlinks/flutter/ios"
+    :path: ".symlinks/flutter/ios-release"
 
 SPEC CHECKSUMS:
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
