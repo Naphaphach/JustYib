@@ -1,3 +1,5 @@
+library singleton;
+
 import 'package:kcapstone/models/menu.dart';
 
 class Cart {
@@ -14,4 +16,26 @@ class Cart {
       }
     }
   }
+
+  int totalPrice() {
+    return menus.keys.fold(
+      0,
+      (i, menu) {
+        int unit = menus.putIfAbsent(menu, () {
+          return 0;
+        });
+        return i + (menu.price * unit);
+      },
+    );
+  }
 }
+
+//class Singleton {
+//  static final Singleton _singleton = new Singleton._internal();
+//
+//  factory Singleton() {
+//    return _singleton;
+//  }
+//
+//  Singleton._internal();
+//}
