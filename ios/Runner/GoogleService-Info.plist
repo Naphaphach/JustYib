@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>26213418269-1pbl2ljm2ps1cstk7hajp50jbh6q7c95.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.26213418269-1pbl2ljm2ps1cstk7hajp50jbh6q7c95</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCTjX8dwCmg9XrDJbR1GryOIfA0sUlQjhw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>26213418269</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kamontat.kcapstone</string>
+	<key>PROJECT_ID</key>
+	<string>kcapstone-final-project</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kcapstone-final-project.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:26213418269:ios:3c19e2986175b7ee</string>
+	<key>DATABASE_URL</key>
+	<string>https://kcapstone-final-project.firebaseio.com</string>
+</dict>
+</plist>

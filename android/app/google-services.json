@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "26213418269",
+    "firebase_url": "https://kcapstone-final-project.firebaseio.com",
+    "project_id": "kcapstone-final-project",
+    "storage_bucket": "kcapstone-final-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26213418269:android:3c19e2986175b7ee",
+        "android_client_info": {
+          "package_name": "com.kamontat.kcapstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26213418269-01r1l3q45op4vhqjhoapc94r9pg2pol6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg_VaPhCPHlWRGtkkfrtYpKcLvaofuPGc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
