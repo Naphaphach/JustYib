@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kcapstone/controllers/catalog.dart';
 import 'package:kcapstone/models/restaurant.dart';
 import 'package:kcapstone/views/Order_1.dart';
-import 'package:kcapstone/views/OrderRes.dart';
 import 'package:http/http.dart' as http;
 
-class Order extends StatelessWidget {
+class OrderRes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +13,16 @@ class Order extends StatelessWidget {
         title: Text("Order"),
       ),
       body: Order_1(),
-
+      floatingActionButton: new FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => OrderRes()),
+          );
+        },
+        tooltip: 'Current order',
+        child: new Icon(Icons.list),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BottomAppBar(
         child: Row(
