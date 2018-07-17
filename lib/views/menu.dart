@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/catalog.dart';
 import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
 
-import 'package:http/http.dart' as http;
-import 'package:kcapstone/views/card.dart';
+import 'package:kcapstone/views/payment.dart';
 
 class MenuPage extends StatefulWidget {
   final Restaurant restaurant;

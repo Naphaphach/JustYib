@@ -36,6 +36,8 @@ class PaymentState extends State<Payment> {
 
           return snapshot.hasData
               ? CardList(
+                  menus: this.menus,
+                  numbers: this.numbers,
                   cards: snapshot.data,
                 )
               : Center(child: CircularProgressIndicator());

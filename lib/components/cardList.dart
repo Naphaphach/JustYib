@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:kcapstone/models/card.dart';
+import 'package:kcapstone/models/cart.dart';
+import 'package:kcapstone/models/menu.dart';
+import 'package:kcapstone/views/summary.dart';
 
 class CardList extends StatelessWidget {
+  final List<Menu> menus;
+  final List<int> numbers;
   final List<CreditCard> cards;
 
-  CardList({Key key, this.cards}) : super(key: key);
+  const CardList({Key key, this.menus, this.numbers, this.cards})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +45,12 @@ class CardList extends StatelessWidget {
               title: Text(cards[index].number),
               subtitle: Text(cards[index].expire),
               onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Summary(
+                    cart: Cart(menus, numbers),
+                    payment: cards[index],
+                  );
+                }));
                 print(cards[index]);
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
