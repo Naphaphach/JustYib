@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kcapstone/models/restaurant.dart';
+import 'package:kcapstone/views/menu.dart';
 
 class CatalogList extends StatelessWidget {
   final List<Restaurant> catalog;
@@ -25,7 +26,12 @@ class CatalogList extends StatelessWidget {
               subtitle: Text(restaurant.location),
               trailing: Text(restaurant.priceRate),
               onTap: () {
-                print(restaurant.menus);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MenuPage(restaurant: restaurant),
+                  ),
+                );
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
             ),
