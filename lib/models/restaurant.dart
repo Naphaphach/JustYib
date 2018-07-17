@@ -11,9 +11,10 @@ class Restaurant {
   final int distance; // meter
   final String location;
   final int priceRate;
+  final String menus;
 
   Restaurant(
-      {this.picture, this.name, this.distance, this.location, this.priceRate});
+      {this.picture, this.name, this.distance, this.location, this.priceRate, this.menus});
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
@@ -21,7 +22,8 @@ class Restaurant {
       name: json['name'] as String,
       distance: json['distance'] as int,
       location: json['location'] as String,
-      priceRate: json['priceRate'] as int,
+      priceRate: json['price'] as int,
+      menus: json['menus'] as String
     );
   }
 
