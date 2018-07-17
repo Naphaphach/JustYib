@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Setting extends StatelessWidget {
-  bool _lights = false;
+class Setting extends StatefulWidget {
+  @override
+  _State createState() => new _State();
+}
+
+class _State extends State<Setting> {
+  bool _noti = false;
+  bool _lang = false;
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +17,17 @@ class Setting extends StatelessWidget {
       ),
       body: new ListView(
         children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.language),
-            title: Text('ตั้งค่าภาษา'),
+          SwitchListTile(
+            title: const Text('ตั้งค่าภาษา'),
+            value: _lang,
+            onChanged: (bool value) { setState(() { _lang = value; }); },
+            secondary: const Icon(Icons.language),
           ),
-          ListTile(
-            leading: Icon(Icons.notifications_active),
-            title: Text('ตั้งค่าการแจ้งเตือน'),
+          SwitchListTile(
+            title: const Text('ตั้งค่าการแจ้งเตือน'),
+            value: _noti,
+            onChanged: (bool value) { setState(() { _noti = value; }); },
+            secondary: const Icon(Icons.notifications_active),
           ),
           ListTile(
             leading: Icon(Icons.person),
@@ -39,12 +49,6 @@ class Setting extends StatelessWidget {
             title: Text('เกี่ยวกับเรา'),
             trailing: const Icon(Icons.arrow_forward),
           ),
-//          SwitchListTile(
-//            title: const Text('Lights'),
-//            value: _lights,
-//            onChanged: (bool value) { setState(() { _lights = value; }); },
-//            secondary: const Icon(Icons.lightbulb_outline),
-//          )
         ],
       ),
     );
