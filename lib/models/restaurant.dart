@@ -13,7 +13,7 @@ class Restaurant {
   final String location;
   final String priceRate;
 
-  final List menus;
+  final List<Menu> menus;
 
   Restaurant(
       {this.picture,

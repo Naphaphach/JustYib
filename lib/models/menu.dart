@@ -6,7 +6,7 @@ class Menu {
   Menu({this.picture, this.name, this.price});
 
   factory Menu.fromJson(Map<String, dynamic> json) {
-    print(json);
+    // print(json);
     return Menu(
       picture: json['picture'] as String,
       name: json['name'] as String,
