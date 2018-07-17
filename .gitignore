@@ -249,3 +249,5 @@ DerivedData/
 
 
 # End of https://www.gitignore.io/api/dart,android,androidstudio,xcode,linux
+#
+android/key.properties
