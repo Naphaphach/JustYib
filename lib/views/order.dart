@@ -1,10 +1,17 @@
-import 'package:flutter/material.dart';
-import 'package:kcapstone/components/order.dart';
-import 'package:kcapstone/models/order.dart';
+import 'dart:math';
 
-import 'package:http/http.dart' as http;
+import 'package:flutter/material.dart';
+import 'package:kcapstone/models/cart.dart';
+
+import 'package:kcapstone/views/summary.dart';
 
 class Order extends StatelessWidget {
+  final List<String> randomStatus = ["กำลังปรุง", "ปรุงสำเร็จ", "รอคอนเฟิร์ม"];
+
+  String random() {
+    randomStatus.shuffle(Random());
+    return randomStatus.first;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +19,36 @@ class Order extends StatelessWidget {
       appBar: AppBar(
         title: Text("My Order"),
       ),
-      body: FutureBuilder<List<OrderModel>>(
-        future: OrderModel.fetchPhotos(context, http.Client()),
-        builder: (context, snapshot) {
-          if (snapshot.hasError) print(snapshot.error);
-
-          return snapshot.hasData
-              ? OrderController(catalog: snapshot.data)
-              : Center(child: CircularProgressIndicator());
-        },
+      body: ListView(
+        children: SingletonCart().carts.map((cart) {
+          return Card(
+            child: ListTile(
+              leading: Image.network(
+                cart.restaurant.picture,
+                alignment: Alignment.bottomCenter,
+                height: 400.0,
+                width: 150.0,
+              ),
+              title: Text(cart.shopName()),
+              subtitle:
+                  Text("ราคาทั้งหมด: " + cart.totalPrice().toString() + " ฿"),
+              onTap: () {
+                print("Show purchase product (" + cart.toString() + ")");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Summary(
+                          status: random(),
+                          cart: cart,
+                        ),
+                  ),
+                );
+              },
+            ),
+          );
+          // return Text(cart.totalPrice().toString());
+        }).toList(),
       ),
-
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BottomAppBar(
         child: Row(
           children: <Widget>[

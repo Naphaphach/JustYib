@@ -97,6 +97,7 @@ class MenuState extends State<MenuPage> {
               context,
               MaterialPageRoute(
                 builder: (context) => Payment(
+                      restaurant: restaurant,
                       menus: menus,
                       numbers: _n,
                     ),

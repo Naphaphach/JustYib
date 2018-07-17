@@ -1,20 +1,25 @@
-library singleton;
-
 import 'package:kcapstone/models/menu.dart';
+import 'package:kcapstone/models/restaurant.dart';
 
 class Cart {
+  Restaurant restaurant;
   Map<Menu, int> menus;
 
-  Cart(List<Menu> menus, List<int> number) {
+  Cart(Restaurant restaurant, List<int> number) {
+    this.restaurant = restaurant;
     this.menus = Map();
 
-    for (var i = 0; i < menus.length; i++) {
+    for (var i = 0; i < restaurant.menus.length; i++) {
       if (number[i] != 0) {
-        this.menus.putIfAbsent(menus[i], () {
+        this.menus.putIfAbsent(restaurant.menus[i], () {
           return number[i];
         });
       }
     }
+  }
+
+  String shopName() {
+    return restaurant.name;
   }
 
   int totalPrice() {
@@ -30,12 +35,20 @@ class Cart {
   }
 }
 
-//class Singleton {
-//  static final Singleton _singleton = new Singleton._internal();
-//
-//  factory Singleton() {
-//    return _singleton;
-//  }
-//
-//  Singleton._internal();
-//}
+class SingletonCart {
+  static final SingletonCart _singleton = new SingletonCart._internal();
+
+  List<Cart> carts;
+
+  factory SingletonCart() {
+    return _singleton;
+  }
+
+  SingletonCart._internal() {
+    carts = [];
+  }
+
+  add(Cart cart) {
+    carts.add(cart);
+  }
+}

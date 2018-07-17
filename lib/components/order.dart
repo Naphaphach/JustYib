@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kcapstone/models/order.dart';
-import 'package:kcapstone/components/orderRes.dart';
 
-class OrderController extends StatelessWidget {
+class OrderList extends StatelessWidget {
   final List<OrderModel> catalog;
 
-  OrderController({Key key, this.catalog}) : super(key: key);
+  OrderList({Key key, this.catalog}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,8 @@ class OrderController extends StatelessWidget {
                 width: 150.0,
               ),
               title: Text(orderModel.name),
-              subtitle: Text(orderModel.price.toString() + '\n' + orderModel.date),
+              subtitle:
+                  Text(orderModel.price.toString() + '\n' + orderModel.date),
               onTap: () {
                 /*Navigator.push(
                   context,
