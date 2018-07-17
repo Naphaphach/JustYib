@@ -34,10 +34,7 @@ class _State extends State<Setting> {
             title: Text('แก้ไขข้อมูลส่วนตัว'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Profile()),
-              );
+              
             },
           ),
           ListTile(
