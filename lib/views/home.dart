@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Restaurant>>(
-      future: Restaurant.fetchPhotos(context, http.Client()),
+      future: Restaurant.fetchRestaurants(context, http.Client()),
       builder: (context, snapshot) {
         if (snapshot.hasError) print(snapshot.error);
 

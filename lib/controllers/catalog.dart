@@ -11,20 +11,21 @@ class CatalogList extends StatelessWidget {
     return ListView.builder(
       itemCount: catalog.length,
       itemBuilder: (context, index) {
+        Restaurant restaurant = catalog[index];
         return new Card(
           child: new SizedBox(
             child: ListTile(
               leading: Image.network(
-                catalog[index].picture,
+                restaurant.picture,
                 alignment: Alignment.bottomCenter,
                 height: 400.0,
                 width: 150.0,
               ),
-              title: Text(catalog[index].name),
-              subtitle: Text(catalog[index].location + catalog[index].priceRate.toString()),
-
+              title: Text(restaurant.name),
+              subtitle: Text(restaurant.location),
+              trailing: Text(restaurant.priceRate),
               onTap: () {
-                print(index);
+                print(restaurant.menus);
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
             ),
