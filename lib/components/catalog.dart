@@ -18,7 +18,7 @@ class CatalogList extends StatelessWidget {
             child: ListTile(
               leading: Image.network(
                 restaurant.picture,
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.center,
                 height: 400.0,
                 width: 150.0,
               ),

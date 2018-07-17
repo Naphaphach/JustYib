@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             Navigator.push(
               context,
+              // ignore: return_of_invalid_type_from_closure
               MaterialPageRoute(builder: (context) => Order()),
             );
           },
