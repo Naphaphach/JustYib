@@ -43,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
             tabs: [
               Tab(
                 // icon: Icon(Icons.home),
-                text: "Home",
+                text: "หน้าหลัก",
               ),
               Tab(
                 // icon: Icon(Icons.favorite),
-                text: "For you",
+                text: "สำหรับคุณ",
               ),
             ],
           ),

@@ -31,7 +31,7 @@ class PaymentState extends State<Payment> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Payment"),
+        title: Text("การจ่ายเงิน"),
       ),
       body: FutureBuilder<List<CreditCard>>(
         future: CreditCard.fetchCreditCards(context, http.Client()),

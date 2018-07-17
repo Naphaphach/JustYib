@@ -53,7 +53,7 @@ class SummaryState extends State<Summary> {
             i++,
             ListTile(
               title: Text("${i.toString()}) " + menu.name),
-              subtitle: Text("Price: " + menu.price.toString()),
+              subtitle: Text("ราคา: " + menu.price.toString()),
               trailing: Text(size.toString() + " unit"),
             ),
           );
@@ -72,7 +72,7 @@ class SummaryState extends State<Summary> {
     if (payment != null) {
       list.add(
         RaisedButton(
-          child: Text("Checkout"),
+          child: Text("จ่ายเงิน"),
           onPressed: () {
             print("done!");
             SingletonCart().add(cart);
@@ -86,7 +86,7 @@ class SummaryState extends State<Summary> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Summary"),
+        title: Text("สรุป"),
       ),
       body: ListView(
         children: list,

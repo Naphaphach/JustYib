@@ -17,7 +17,7 @@ class Order extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Order"),
+        title: Text("รายการของฉัน"),
       ),
       body: ListView(
         children: SingletonCart().carts.map((cart) {

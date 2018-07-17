@@ -59,7 +59,7 @@ class MenuState extends State<MenuPage> {
                         icon: Icon(Icons.remove),
                         splashColor: Colors.transparent,
                         onPressed: () {
-                          print("remove");
+                          print("remove: " + menus[index].name);
                           this.setState(() {
                             if (_n[index] > 0) {
                               _n[index]--;
@@ -72,7 +72,7 @@ class MenuState extends State<MenuPage> {
                         icon: Icon(Icons.add),
                         splashColor: Colors.transparent,
                         onPressed: () {
-                          print("add");
+                          print("add: " + menus[index].name);
                           this.setState(() {
                             _n[index]++;
                           });
@@ -111,7 +111,7 @@ class MenuState extends State<MenuPage> {
                   child: new Padding(
                     padding: const EdgeInsets.all(32.0),
                     child: new Text(
-                      'Choose at least 1 menu',
+                      'ต้องเลือกอย่างน้อย 1 เมนู',
                       textAlign: TextAlign.center,
                       style: new TextStyle(
                           color: Theme.of(context).accentColor, fontSize: 24.0),

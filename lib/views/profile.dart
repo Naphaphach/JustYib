@@ -6,12 +6,11 @@ class Profile extends StatefulWidget {
 }
 
 class _State extends State<Profile> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile"),
+        title: Text("ข้อมูลของฉัน"),
       ),
       body: new SingleChildScrollView(
         child: new Column(
@@ -47,7 +46,7 @@ class _State extends State<Profile> {
                     ),
                     Padding(padding: const EdgeInsets.all(8.0)),
                     RaisedButton(
-                      onPressed: (){
+                      onPressed: () {
                         print('Save');
                       },
                       child: Text('บันทึก'),

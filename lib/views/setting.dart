@@ -14,7 +14,7 @@ class _State extends State<Setting> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Setting"),
+        title: Text("ตั้งค่า"),
       ),
       body: new ListView(
         children: <Widget>[
