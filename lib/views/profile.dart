@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Setting extends StatefulWidget {
+class Profile extends StatefulWidget {
   @override
   _State createState() => new _State();
 }
 
-class _State extends State<Setting> {
+class _State extends State<Profile> {
   bool _noti = false;
   bool _lang = false;
 
@@ -33,12 +33,11 @@ class _State extends State<Setting> {
             leading: Icon(Icons.person),
             title: Text('แก้ไขข้อมูลส่วนตัว'),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Profile()),
-              );
-            },
+          ),
+          ListTile(
+            leading: Icon(Icons.library_books),
+            title: Text('แนะนำการใช้งาน'),
+            trailing: const Icon(Icons.arrow_forward),
           ),
           ListTile(
             leading: Icon(Icons.help),
