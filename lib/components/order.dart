@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/mockupData.dart';
+import 'package:kcapstone/models/order.dart';
 
-class Catalogsample extends StatelessWidget {
-  final List<Sample> catalog;
+class OrderController extends StatelessWidget {
+  final List<OrderModel> catalog;
 
-  Catalogsample({Key key, this.catalog}) : super(key: key);
+  OrderController({Key key, this.catalog}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

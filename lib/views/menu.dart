@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/controllers/catalog.dart';
+import 'package:kcapstone/components/catalog.dart';
 import 'package:kcapstone/models/restaurant.dart';
 
 import 'package:http/http.dart' as http;
