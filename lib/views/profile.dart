@@ -6,50 +6,58 @@ class Profile extends StatefulWidget {
 }
 
 class _State extends State<Profile> {
-  bool _noti = false;
-  bool _lang = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Setting"),
+        title: Text("Profile"),
       ),
-      body: new ListView(
-        children: <Widget>[
-          SwitchListTile(
-            title: const Text('ตั้งค่าภาษา'),
-            value: _lang,
-            onChanged: (bool value) { setState(() { _lang = value; }); },
-            secondary: const Icon(Icons.language),
-          ),
-          SwitchListTile(
-            title: const Text('ตั้งค่าการแจ้งเตือน'),
-            value: _noti,
-            onChanged: (bool value) { setState(() { _noti = value; }); },
-            secondary: const Icon(Icons.notifications_active),
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('แก้ไขข้อมูลส่วนตัว'),
-            trailing: const Icon(Icons.arrow_forward),
-          ),
-          ListTile(
-            leading: Icon(Icons.library_books),
-            title: Text('แนะนำการใช้งาน'),
-            trailing: const Icon(Icons.arrow_forward),
-          ),
-          ListTile(
-            leading: Icon(Icons.help),
-            title: Text('ช่วยเหลือ'),
-            trailing: const Icon(Icons.arrow_forward),
-          ),
-          ListTile(
-            leading: Icon(Icons.info),
-            title: Text('เกี่ยวกับเรา'),
-            trailing: const Icon(Icons.arrow_forward),
-          ),
-        ],
+      body: new SingleChildScrollView(
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            new Container(
+              padding: EdgeInsets.all(20.0),
+              child: new Form(
+                child: new Column(
+                  children: <Widget>[
+                    Image.network(
+                      'https://upload.wikimedia.org/wikipedia/commons/4/4a/Profil_licnosti.png',
+                      width: 128.0,
+                      height: 128.0,
+                    ),
+                    TextFormField(
+                      initialValue: "Just",
+                      decoration: InputDecoration(
+                        labelText: 'ชื่อ',
+                      ),
+                    ),
+                    TextFormField(
+                      initialValue: "Yip",
+                      decoration: InputDecoration(
+                        labelText: 'นามสกุล',
+                      ),
+                    ),
+                    TextFormField(
+                      initialValue: "098-765-4321",
+                      decoration: InputDecoration(
+                        labelText: 'เบอร์โทรศัพท์',
+                      ),
+                    ),
+                    Padding(padding: const EdgeInsets.all(8.0)),
+                    RaisedButton(
+                      onPressed: (){
+                        print('Save');
+                      },
+                      child: Text('บันทึก'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
