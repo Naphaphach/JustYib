@@ -38,12 +38,10 @@ class SummaryState extends State<Summary> {
 
     if (cart.payment != null) list.add(PaymentCard(creditCard: cart.payment));
 
-    int i = 0;
+    int i = 1;
     list.addAll(cart.getOrderMenus().map((menu) {
       int number = cart.getNumberByMenu(menu);
-      print(number);
       if (number > 0) {
-        print("more than 0");
         return PurchaseMenuCard(
           index: i++,
           menu: menu,
