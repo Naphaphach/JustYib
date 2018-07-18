@@ -13,6 +13,7 @@ class CatalogList extends StatelessWidget {
       itemCount: catalog.length,
       itemBuilder: (context, index) {
         Restaurant restaurant = catalog[index];
+        
         return new Card(
           child: new SizedBox(
             child: ListTile(
@@ -33,10 +34,7 @@ class CatalogList extends StatelessWidget {
                   ),
                 );
               },
-              // trailing: IconButton(icon: Ico, onPressed: null),
             ),
-
-            /// This is the one I want to be dynamic. The more items there are the more space it takes and the less space section 3 gets.
             height: 130.0,
           ),
         );

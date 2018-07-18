@@ -1,8 +1,12 @@
+import 'dart:async';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kcapstone/models/cart.dart';
 import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
 
-import 'package:kcapstone/views/payment.dart';
+import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 class MenuPage extends StatefulWidget {
   final Restaurant restaurant;
@@ -17,28 +21,26 @@ class MenuPage extends StatefulWidget {
 
 class MenuState extends State<MenuPage> {
   final Restaurant restaurant;
-  List<int> _n;
+  Cart _cart;
+
+  Icon _icon = Icon(Icons.timer);
 
   // In the constructor, require a restaurant
   MenuState({@required this.restaurant}) {
-    _n = List.generate(restaurant.menus.length, (e) {
-      return 0;
-    });
+    _cart = Cart(restaurant);
   }
 
   _add(menus, index) {
     print("add: " + menus[index].name);
     this.setState(() {
-      _n[index]++;
+      _cart.add(menus[index], 1);
     });
   }
 
   _remove(menus, index) {
     print("remove: " + menus[index].name);
     this.setState(() {
-      if (_n[index] > 0) {
-        _n[index]--;
-      }
+      _cart.remove(menus[index], 1);
     });
   }
 
@@ -109,7 +111,7 @@ class MenuState extends State<MenuPage> {
                             _remove(menus, index);
                           },
                         ),
-                        Text(_n[index].toString()),
+                        Text(_cart.getNumberByMenu(menu).toString()),
                         IconButton(
                           icon: Icon(Icons.add),
                           splashColor: Colors.transparent,
@@ -127,22 +129,31 @@ class MenuState extends State<MenuPage> {
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
+        tooltip: "Buy",
+        icon: _icon,
+        label: Text("Hello"),
         onPressed: () {
-          print("Buy");
-          if (_n.any((i) {
-            return i > 0;
-          })) {
-            Navigator.push(
+          print("Buy: " + _cart.toString());
+          if (_cart.isOrderExist()) {
+            DatePicker.showDatePicker(
               context,
-              MaterialPageRoute(
-                builder: (context) => Payment(
-                      restaurant: restaurant,
-                      menus: menus,
-                      numbers: _n,
-                    ),
-              ),
+              showTitleActions: true,
+              minYear: 1970,
+              maxYear: 2020,
+              initialYear: 2018,
+              initialMonth: 6,
+              initialDate: 21,
+              onChanged: (year, month, date) {},
+              onConfirm: (year, month, date) {},
             );
+//            f.then((dt) {
+//              _cart.setTime(dt);
+//              SingletonCart().add(_cart);
+//
+//              Navigator.push(
+//                  context, MaterialPageRoute(builder: (_) => Payment()));
+//            });
           } else {
             showModalBottomSheet(
               context: context,
@@ -162,8 +173,6 @@ class MenuState extends State<MenuPage> {
             );
           }
         },
-        tooltip: "Buy",
-        child: Icon(Icons.shopping_cart),
       ),
     );
   }

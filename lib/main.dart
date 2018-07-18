@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:kcapstone/views/order.dart';
 import 'package:kcapstone/views/foryou.dart';
 import 'package:kcapstone/views/home.dart';
+import 'package:kcapstone/views/profile.dart';
 import 'package:kcapstone/views/setting.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 
@@ -24,21 +25,44 @@ class MyApp extends StatelessWidget {
       navigatorObservers: [
         new FirebaseAnalyticsObserver(analytics: analytics),
       ],
+      routes: <String, WidgetBuilder>{
+        '/home': (context) => MyHomePage(
+              title: 'Just-Yib',
+              index: 0,
+            ),
+        '/foryou': (context) => MyHomePage(
+              title: 'Just-Yib',
+              index: 1,
+            ),
+        '/profile': (context) => Profile(),
+        '/setting': (context) => Setting(),
+        '/order': (context) => Order(),
+      },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  final int index;
+
+  MyHomePage({Key key, this.title, this.index}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => new _MyHomePageState(index: index);
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int index = 0;
+  int index;
+
+  _MyHomePageState({index}) {
+    if (index == null) {
+      this.index = 0;
+    } else {
+      this.index = index;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,11 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         floatingActionButton: new FloatingActionButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              // ignore: return_of_invalid_type_from_closure
-              MaterialPageRoute(builder: (context) => Order()),
-            );
+            Navigator.pushNamed(context, "/order");
           },
           tooltip: 'Current order',
           child: new Icon(Icons.list),
@@ -98,10 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
               IconButton(
                 icon: Icon(Icons.settings),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Setting()),
-                  );
+                  Navigator.pushNamed(context, "/setting");
                 },
               ),
             ],

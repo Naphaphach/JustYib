@@ -5,15 +5,11 @@ import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
 import 'package:kcapstone/views/summary.dart';
 
-class CardList extends StatelessWidget {
-  final List<Menu> menus;
-  final List<int> numbers;
+class CreditCardList extends StatelessWidget {
+  final Cart cart;
   final List<CreditCard> cards;
-  final Restaurant restaurant;
 
-  const CardList(
-      {Key key, this.menus, this.numbers, this.cards, this.restaurant})
-      : super(key: key);
+  const CreditCardList({Key key, this.cart, this.cards}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +31,7 @@ class CardList extends StatelessWidget {
                     })),
           );
         }
+
         return new Card(
           margin: EdgeInsets.all(10.2),
           child: new SizedBox(
@@ -48,10 +45,11 @@ class CardList extends StatelessWidget {
               title: Text(cards[index].number),
               subtitle: Text(cards[index].expire),
               onTap: () {
+                cart.pay(cards[index]);
+
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return Summary(
-                    cart: Cart(restaurant, numbers),
-                    payment: cards[index],
+                    cart: cart,
                   );
                 }));
                 print(cards[index]);

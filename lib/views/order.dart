@@ -1,17 +1,18 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:kcapstone/components/cartList.dart';
 import 'package:kcapstone/models/cart.dart';
 
 import 'package:kcapstone/views/summary.dart';
 
 class Order extends StatelessWidget {
-  final List<String> randomStatus = ["กำลังปรุง", "ปรุงสำเร็จ", "รอคอนเฟิร์ม"];
+  // final List<String> randomStatus = ["กำลังปรุง", "ปรุงสำเร็จ", "รอคอนเฟิร์ม"];
 
-  String random() {
-    randomStatus.shuffle(Random());
-    return randomStatus.first;
-  }
+//  String random() {
+//    randomStatus.shuffle(Random());
+//    return randomStatus.first;
+//  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,32 +22,7 @@ class Order extends StatelessWidget {
       ),
       body: ListView(
         children: SingletonCart().carts.map((cart) {
-          return Card(
-            child: ListTile(
-              // leading: Image.network(
-              //   cart.restaurant.picture,
-              //   alignment: Alignment.bottomCenter,
-              //   height: 400.0,
-              //   width: 150.0,
-              // ),
-              title: Text(cart.shopName()),
-              subtitle:
-                  Text("ราคาทั้งหมด: " + cart.totalPrice().toString() + " ฿"),
-              trailing: Icon(Icons.keyboard_arrow_right),
-              onTap: () {
-                print("Show purchase product (" + cart.toString() + ")");
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Summary(
-                          status: random(),
-                          cart: cart,
-                        ),
-                  ),
-                );
-              },
-            ),
-          );
+          return CartList(cart);
           // return Text(cart.totalPrice().toString());
         }).toList(),
       ),
