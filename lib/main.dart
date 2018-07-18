@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       home: new MyHomePage(title: 'Just-Yib'),
       navigatorObservers: [
         new FirebaseAnalyticsObserver(analytics: analytics),

@@ -52,28 +52,38 @@ class _State extends State<Setting> {
       leading: Icon(Icons.info),
       title: Text('เกี่ยวกับเรา'),
       trailing: const Icon(Icons.arrow_forward),
+      onTap: () {
+        Future<PackageInfo> future = PackageInfo.fromPlatform();
+        future.then((package) {
+          showModalBottomSheet(
+            context: context,
+            builder: (_) {
+              return Container(
+                child: ListTile(
+                  leading: Icon(Icons.verified_user),
+                  title: Text(
+                      "Version: ${package.version} (${package.buildNumber})"),
+                ),
+              );
+            },
+          );
+        });
+      },
     ));
-
-    Future<PackageInfo> future = PackageInfo.fromPlatform();
-    print(future);
-    future.then((package) {
-      setState(() {
-        list.add(ListTile(
-          title: Text("Version: " + package.version),
-          subtitle: Text("Build: " + package.buildNumber),
-        ));
-      });
-    });
   }
 
   @override
   Widget build(BuildContext context) {
+    print("build: " + list.length.toString());
     return Scaffold(
       appBar: AppBar(
         title: Text("ตั้งค่า"),
       ),
-      body: new ListView(
-        children: list,
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return list[index];
+        },
+        itemCount: list.length,
       ),
     );
   }

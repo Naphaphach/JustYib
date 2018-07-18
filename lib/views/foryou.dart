@@ -8,7 +8,7 @@ class ForYou extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Restaurant>>(
-      future: Restaurant.fetchRestaurants(context, http.Client()),
+      future: Restaurant.fetchForyouRestaurants(context, http.Client()),
       builder: (context, snapshot) {
         if (snapshot.hasError) print(snapshot.error);
 

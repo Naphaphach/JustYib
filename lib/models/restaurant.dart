@@ -62,6 +62,17 @@ class Restaurant {
     });
   }
 
+  static Future<List<Restaurant>> fetchForyouRestaurants(
+      BuildContext context, http.Client client) async {
+    Future<String> s =
+        DefaultAssetBundle.of(context).loadString("resources/foryou.json");
+
+    return s.then((s) {
+      // Use the compute function to run parsePhotos in a separate isolate
+      return compute(Restaurant.parseRestaurant, s);
+    });
+  }
+
   // A function that will convert a response body into a List<Photo>
   static List<Restaurant> parseRestaurant(String responseBody) {
     final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
