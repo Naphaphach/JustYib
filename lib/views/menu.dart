@@ -7,6 +7,7 @@ import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
 
 import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
+import 'package:kcapstone/views/payment.dart';
 
 class MenuPage extends StatefulWidget {
   final Restaurant restaurant;
@@ -132,28 +133,17 @@ class MenuState extends State<MenuPage> {
       floatingActionButton: FloatingActionButton.extended(
         tooltip: "Buy",
         icon: _icon,
-        label: Text("Hello"),
+        label: Text("Buy"),
         onPressed: () {
           print("Buy: " + _cart.toString());
           if (_cart.isOrderExist()) {
-            DatePicker.showDatePicker(
-              context,
-              showTitleActions: true,
-              minYear: 1970,
-              maxYear: 2020,
-              initialYear: 2018,
-              initialMonth: 6,
-              initialDate: 21,
-              onChanged: (year, month, date) {},
-              onConfirm: (year, month, date) {},
-            );
-//            f.then((dt) {
-//              _cart.setTime(dt);
-//              SingletonCart().add(_cart);
-//
-//              Navigator.push(
-//                  context, MaterialPageRoute(builder: (_) => Payment()));
-//            });
+            print(_cart.getNumberMenu());
+            print(_cart.getTotalNumberMenu());
+            // _cart.setTime(dt);
+            SingletonCart().add(_cart);
+
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => Payment()));
           } else {
             showModalBottomSheet(
               context: context,

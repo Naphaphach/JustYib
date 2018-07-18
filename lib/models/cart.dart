@@ -28,17 +28,19 @@ class Cart {
 
   remove(Menu menu, int number) {
     // exist
-    if (_menus.containsKey(Menu)) {
+    if (_menus.containsKey(menu)) {
       // update current + new
       int current = _menus.putIfAbsent(menu, () => 0);
       if (current > 0) {
         number = current - number;
+      } else {
+        _menus.remove(menu);
       }
     }
   }
 
   List<Menu> getOrderMenus() {
-    return _menus.keys;
+    return _menus.keys.toList();
   }
 
   Map<Menu, int> getMapOrderMenus() {
@@ -46,35 +48,51 @@ class Cart {
   }
 
   int getNumberByMenu(Menu menu) {
-    return _menus.putIfAbsent(menu, () => 0);
+    if (_menus.containsKey(menu)) {
+      return _menus[menu];
+    }
+    return 0;
+  }
+
+  int getNumberMenu() {
+    return _menus.keys.length;
+  }
+
+  int getTotalNumberMenu() {
+    return _menus.values.fold(0, (prev, current) {
+      return prev + current;
+    });
   }
 
   bool isOrderExist() {
     return _menus.values.any((e) => e > 0);
   }
 
-  pay(CreditCard payment) {
+  setPayment(CreditCard payment) {
     this.payment = payment;
-    order();
-    SingletonCart().add(this);
+    // SingletonCart().add(this);
   }
 
   setTime(DateTime time) {
     this._pickup = time;
   }
 
+  /// set to waiting
   order() {
     _status = Status.waiting;
   }
 
+  /// set to processing
   confirm() {
     _status = Status.processing;
   }
 
+  /// set to finished
   finish() {
     _status = Status.finished;
   }
 
+  /// set to taken
   done() {
     _status = Status.taken;
   }

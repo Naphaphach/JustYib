@@ -31,7 +31,7 @@ class PaymentState extends State<Payment> {
           // FIXME: mock cart
           return snapshot.hasData
               ? CreditCardList(
-                  cart: Cart(null),
+                  cart: SingletonCart().currentCart(),
                   cards: snapshot.data,
                 )
               : Center(child: CircularProgressIndicator());

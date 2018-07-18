@@ -7,22 +7,20 @@ import 'package:kcapstone/models/cart.dart';
 import 'package:kcapstone/constants/status.dart';
 
 class Summary extends StatefulWidget {
-  final CreditCard payment;
   final Cart cart;
 
-  const Summary({Key key, this.payment, this.cart}) : super(key: key);
+  const Summary({Key key, this.cart}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return SummaryState(payment: payment, cart: cart);
+    return SummaryState(cart: cart);
   }
 }
 
 class SummaryState extends State<Summary> {
-  final CreditCard payment;
   final Cart cart;
 
-  SummaryState({this.payment, this.cart});
+  SummaryState({this.cart});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +28,7 @@ class SummaryState extends State<Summary> {
     print(cart.getRestaurant().name);
 
     List<Widget> list = [];
+
     if (!cart.isStatus(Status.none)) {
       list.add(ListTile(
         leading: StatusHelper().getIcon(cart.getRawStatus()),
@@ -37,28 +36,33 @@ class SummaryState extends State<Summary> {
       ));
     }
 
-    if (payment != null) list.add(PaymentCard(creditCard: payment));
+    if (cart.payment != null) list.add(PaymentCard(creditCard: cart.payment));
 
     int i = 0;
     list.addAll(cart.getOrderMenus().map((menu) {
-      return PurchaseMenuCard(
-        index: i++,
-        menu: menu,
-        number: cart.getNumberByMenu(menu),
-      );
+      int number = cart.getNumberByMenu(menu);
+      print(number);
+      if (number > 0) {
+        print("more than 0");
+        return PurchaseMenuCard(
+          index: i++,
+          menu: menu,
+          number: number,
+        );
+      }
     }));
 
     list.add(PriceCard(price: cart.getTotalPrice()));
 
-    if (payment != null) {
+    if (cart.isStatus(Status.none)) {
       list.add(
         RaisedButton(
           child: Text("จ่ายเงิน"),
           onPressed: () {
-            print("done!");
-            SingletonCart().add(cart);
-
+            print("paid -- done!");
+            cart.order();
             Navigator.popUntil(context, ModalRoute.withName('/'));
+            Navigator.pushNamed(context, "/order");
           },
           padding: EdgeInsets.symmetric(vertical: 7.0),
         ),

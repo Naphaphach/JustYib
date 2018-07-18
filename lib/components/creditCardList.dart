@@ -45,14 +45,12 @@ class CreditCardList extends StatelessWidget {
               title: Text(cards[index].number),
               subtitle: Text(cards[index].expire),
               onTap: () {
-                cart.pay(cards[index]);
-
+                cart.setPayment(cards[index]);
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return Summary(
                     cart: cart,
                   );
                 }));
-                print(cards[index]);
               },
               // trailing: IconButton(icon: Ico, onPressed: null),
             ),
