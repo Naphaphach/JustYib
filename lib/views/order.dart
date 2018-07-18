@@ -23,15 +23,16 @@ class Order extends StatelessWidget {
         children: SingletonCart().carts.map((cart) {
           return Card(
             child: ListTile(
-              leading: Image.network(
-                cart.restaurant.picture,
-                alignment: Alignment.bottomCenter,
-                height: 400.0,
-                width: 150.0,
-              ),
+              // leading: Image.network(
+              //   cart.restaurant.picture,
+              //   alignment: Alignment.bottomCenter,
+              //   height: 400.0,
+              //   width: 150.0,
+              // ),
               title: Text(cart.shopName()),
               subtitle:
                   Text("ราคาทั้งหมด: " + cart.totalPrice().toString() + " ฿"),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 print("Show purchase product (" + cart.toString() + ")");
                 Navigator.push(

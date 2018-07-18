@@ -26,6 +26,22 @@ class MenuState extends State<MenuPage> {
     });
   }
 
+  _add(menus, index) {
+    print("add: " + menus[index].name);
+    this.setState(() {
+      _n[index]++;
+    });
+  }
+
+  _remove(menus, index) {
+    print("remove: " + menus[index].name);
+    this.setState(() {
+      if (_n[index] > 0) {
+        _n[index]--;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     List<Menu> menus = restaurant.menus;
@@ -38,50 +54,74 @@ class MenuState extends State<MenuPage> {
         itemCount: menus.length,
         itemBuilder: (context, index) {
           Menu menu = menus[index];
-          return Card(
-            child: Column(
-              children: <Widget>[
-                ListTile(
-                  leading: Image.network(
-                    menu.picture,
-                    alignment: Alignment.center,
-                    height: 300.0,
-                    width: 150.0,
+          return new GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return new Container(
+                    height: 150.0,
+                    child: Column(
+                      children: <Widget>[
+                        ListTile(
+                          leading: Image.network(
+                            menu.picture,
+                            alignment: Alignment.center,
+                            height: 300.0,
+                            width: 150.0,
+                          ),
+                          title: Text(
+                              menu.name + " " + menu.price.toString() + " ฿"),
+                          subtitle: Text(
+                            menu.description,
+                            overflow: TextOverflow.clip,
+                            maxLines: 3,
+                            softWrap: true,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              );
+            },
+            child: Card(
+              child: Column(
+                children: <Widget>[
+                  ListTile(
+                    leading: Image.network(
+                      menu.picture,
+                      alignment: Alignment.center,
+                      height: 300.0,
+                      width: 150.0,
+                    ),
+                    title: Text(menu.name),
+                    subtitle: Text("ราคา ${menu.price.toString()} ฿"),
                   ),
-                  title: Text(menu.name),
-                  subtitle: Text("ราคา ${menu.price.toString()} ฿"),
-                ),
-                ButtonTheme.bar(
-                  // make buttons use the appropriate styles for cards
-                  child: ButtonBar(
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.remove),
-                        splashColor: Colors.transparent,
-                        onPressed: () {
-                          print("remove: " + menus[index].name);
-                          this.setState(() {
-                            if (_n[index] > 0) {
-                              _n[index]--;
-                            }
-                          });
-                        },
-                      ),
-                      Text(_n[index].toString()),
-                      IconButton(
-                        icon: Icon(Icons.add),
-                        splashColor: Colors.transparent,
-                        onPressed: () {
-                          print("add: " + menus[index].name);
-                          this.setState(() {
-                            _n[index]++;
-                          });
-                        },
-                      ),
-                    ],
+                  ButtonTheme.bar(
+                    // make buttons use the appropriate styles for cards
+                    child: ButtonBar(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.remove),
+                          splashColor: Colors.transparent,
+                          onPressed: () {
+                            _remove(menus, index);
+                          },
+                        ),
+                        Text(_n[index].toString()),
+                        IconButton(
+                          icon: Icon(Icons.add),
+                          splashColor: Colors.transparent,
+                          onPressed: () {
+                            _add(menus, index);
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         },
