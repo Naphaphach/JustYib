@@ -137,11 +137,21 @@ class MenuState extends State<MenuPage> {
         onPressed: () {
           print("Buy: " + _cart.toString());
           if (_cart.isOrderExist()) {
+            SingletonCart().add(_cart);
+
+            showDialog(
+              context: context,
+              builder: (_) {
+                return Container(
+                  child: Row(),
+                );
+              },
+            );
+
             // TODO: Add timer
             // _cart.setTime(dt);
-            SingletonCart().add(_cart);
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => Payment()));
+//            Navigator.push(
+//                context, MaterialPageRoute(builder: (_) => Payment()));
           } else {
             showModalBottomSheet(
               context: context,
