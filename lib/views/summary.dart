@@ -59,8 +59,12 @@ class SummaryState extends State<Summary> {
     list.add(PriceCard(price: cart.getTotalPrice()));
 
     if (cart.isStatus(Status.none)) {
-      list.add(
-        RaisedButton(
+      list.add(Padding(
+        padding: EdgeInsets.only(top: 10.0),
+        child: MaterialButton(
+          height: 56.0,
+          color: ThemeData.light().primaryColor,
+          highlightColor: Colors.transparent,
           child: Text("จ่ายเงิน"),
           onPressed: () {
             print("paid -- done!");
@@ -70,7 +74,23 @@ class SummaryState extends State<Summary> {
           },
           padding: EdgeInsets.symmetric(vertical: 7.0),
         ),
-      );
+      ));
+
+      list.add(Padding(
+        padding: EdgeInsets.symmetric(vertical: 10.0),
+        child: MaterialButton(
+          height: 56.0,
+          color: ThemeData.light().errorColor,
+          highlightColor: Colors.transparent,
+          child: Text("ยกเลิก"),
+          onPressed: () {
+            print("cancel!");
+            SingletonCart().cancelCurrentCart();
+            Navigator.popUntil(context, ModalRoute.withName('/'));
+          },
+          padding: EdgeInsets.symmetric(vertical: 7.0),
+        ),
+      ));
     }
 
     return Scaffold(

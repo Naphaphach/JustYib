@@ -21,7 +21,7 @@ class Order extends StatelessWidget {
         title: Text("รายการของฉัน"),
       ),
       body: ListView(
-        children: SingletonCart().carts.map((cart) {
+        children: SingletonCart().onlyNoneTakenCart().map((cart) {
           return CartList(cart);
           // return Text(cart.totalPrice().toString());
         }).toList(),

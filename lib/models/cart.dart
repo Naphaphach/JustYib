@@ -163,11 +163,19 @@ class SingletonCart {
   }
 
   add(Cart cart) {
-    carts.add(cart);
+    carts.insert(0, cart);
   }
 
   Cart currentCart() {
-    return carts.last;
+    return carts.first;
+  }
+
+  List<Cart> onlyNoneTakenCart() {
+    return carts.skipWhile((e) => e.isStatus(Status.taken)).toList();
+  }
+
+  List<Cart> onlyTakenCart() {
+    return carts.takeWhile((e) => e.isStatus(Status.taken)).toList();
   }
 
   List<Cart> getCartByRestaurant(Restaurant restaurant) {
@@ -181,6 +189,10 @@ class SingletonCart {
   }
 
   Cart getCurrentCartByRestaurant(Restaurant restaurant) {
-    return getCartByRestaurant(restaurant).last;
+    return getCartByRestaurant(restaurant).first;
+  }
+
+  void cancelCurrentCart() {
+    carts.removeAt(0);
   }
 }
