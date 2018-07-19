@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
               title: 'Just-Yib',
               index: 1,
             ),
-        '/profile': (context) => Profile(),
+        '/profile': (context) => ProfileWidget(),
         '/setting': (context) => Setting(),
         '/order': (context) => Order(),
       },
@@ -102,14 +102,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ForYou(),
           ],
         ),
-        floatingActionButton: new FloatingActionButton(
+        floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.pushNamed(context, "/order");
           },
           tooltip: 'Current order',
-          child: new Icon(Icons.shopping_cart),
+          icon: Icon(Icons.shopping_cart),
+          label: Text("รายการของฉัน"),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         bottomNavigationBar: BottomAppBar(
           child: new Row(
             mainAxisSize: MainAxisSize.max,

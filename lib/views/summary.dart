@@ -45,6 +45,7 @@ class SummaryState extends State<Summary> {
     if (cart.payment != null) list.add(PaymentCard(creditCard: cart.payment));
 
     int i = 1;
+    // TODO: editable menu
     list.addAll(cart.getOrderMenus().map((menu) {
       int number = cart.getNumberByMenu(menu);
       if (number > 0) {

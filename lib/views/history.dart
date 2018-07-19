@@ -7,7 +7,7 @@ class History extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("รายการของฉัน"),
+        title: Text("ประวัติของฉัน"),
       ),
       body: ListView(
         children: SingletonCart().onlyTakenCart().map((cart) {

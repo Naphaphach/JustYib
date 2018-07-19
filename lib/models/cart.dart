@@ -171,7 +171,9 @@ class SingletonCart {
   }
 
   List<Cart> onlyNoneTakenCart() {
-    return carts.skipWhile((e) => e.isStatus(Status.taken)).toList();
+    return carts
+        .skipWhile((e) => e.isStatus(Status.taken) && e.isStatus(Status.none))
+        .toList();
   }
 
   List<Cart> onlyTakenCart() {

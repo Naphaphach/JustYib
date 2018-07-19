@@ -15,8 +15,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
-apply plugin: 'com.google.gms.google-services'
-
 def keystorePropertiesFile = rootProject.file("key.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
@@ -37,8 +35,8 @@ android {
         applicationId "com.kamontat.kcapstone"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode "$buildCode"
-        versionName "$version"
+        versionCode rootProject.ext.build_version
+        versionName rootProject.ext.version
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -71,3 +69,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'

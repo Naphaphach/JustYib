@@ -10,15 +10,27 @@ import 'package:kcapstone/views/summary.dart';
 class Order extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<Widget> list = [];
+
+    list.add(Card(
+      child: ListTile(
+        // leading: Icon(Icons.control_point),
+        title: Text("Just-Point: "),
+        trailing: Text("2000 point"),
+      ),
+    ));
+
+    // FIXME: Error in filter only some cart status
+    list.addAll(SingletonCart().onlyNoneTakenCart().map((cart) {
+      return CartList(cart);
+      // return Text(cart.totalPrice().toString());
+    }).toList());
     return Scaffold(
       appBar: AppBar(
         title: Text("รายการของฉัน"),
       ),
       body: ListView(
-        children: SingletonCart().onlyNoneTakenCart().map((cart) {
-          return CartList(cart);
-          // return Text(cart.totalPrice().toString());
-        }).toList(),
+        children: list,
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(

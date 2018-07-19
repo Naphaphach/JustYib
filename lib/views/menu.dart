@@ -131,17 +131,15 @@ class MenuState extends State<MenuPage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
-        tooltip: "Buy",
+        tooltip: "ซื้อ",
         icon: _icon,
-        label: Text("Buy"),
+        label: Text("ซื้อ"),
         onPressed: () {
           print("Buy: " + _cart.toString());
           if (_cart.isOrderExist()) {
-            print(_cart.getNumberMenu());
-            print(_cart.getTotalNumberMenu());
+            // TODO: Add timer
             // _cart.setTime(dt);
             SingletonCart().add(_cart);
-
             Navigator.push(
                 context, MaterialPageRoute(builder: (_) => Payment()));
           } else {
