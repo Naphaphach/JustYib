@@ -1,8 +1,9 @@
+import 'dart:math';
+
 import 'package:kcapstone/models/card.dart';
 import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
 import 'package:kcapstone/constants/status.dart';
-import 'package:kcapstone/views/payment.dart';
 
 class Cart {
   Restaurant _restaurant;
@@ -11,6 +12,8 @@ class Cart {
   DateTime _pickup;
 
   CreditCard payment;
+
+  String _code;
 
   Cart(this._restaurant) {
     this._menus = Map();
@@ -80,6 +83,12 @@ class Cart {
   /// set to waiting
   order() {
     _status = Status.waiting;
+
+    // abcdefghijklmnopqrstuvwxyz
+    List<String> list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
+    list.shuffle(Random());
+
+    _code = list.join().substring(0, 7);
   }
 
   /// set to processing
@@ -95,6 +104,20 @@ class Cart {
   /// set to taken
   done() {
     _status = Status.taken;
+  }
+
+  /// MOCK UP METHOD
+  /// don't use this in real product
+  next() {
+    if (Status.values.length - 1 > _status.index) {
+      _status = Status.values[_status.index + 1];
+      print("Warning: update status" + " (to): " + _status.toString());
+    }
+  }
+
+  String showCode() {
+    if (!isStatus(Status.none)) return _code;
+    return null;
   }
 
   Restaurant getRestaurant() {

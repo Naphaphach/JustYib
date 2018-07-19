@@ -24,15 +24,21 @@ class SummaryState extends State<Summary> {
 
   @override
   Widget build(BuildContext context) {
-    // print(payment.number);
-    print(cart.getRestaurant().name);
-
     List<Widget> list = [];
 
     if (!cart.isStatus(Status.none)) {
+      // FIXME: remove this in real project
+      cart.next(); // for mock up only
+      print("cart: " + cart.getStatus());
+
+//      list.add(ListTile(
+//        leading: Icon(Icons.code),
+//        title: Text(cart.showCode()),
+//      ));
       list.add(ListTile(
         leading: StatusHelper().getIcon(cart.getRawStatus()),
-        title: Text(cart.getStatus()),
+        title: Text(cart.showCode()),
+        subtitle: Text(cart.getStatus()),
       ));
     }
 

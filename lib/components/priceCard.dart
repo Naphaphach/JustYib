@@ -9,8 +9,8 @@ class PriceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: Icon(Icons.play_arrow),
-        title: Text("total price"),
+        // leading: Icon(Icons.p),
+        title: Text("ราคาทั้งหมด"),
         trailing: Text(price.toString() + " ฿"),
       ),
     );
