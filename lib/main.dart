@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-
       home: new MyHomePage(title: 'Just-Yib'),
       navigatorObservers: [
         new FirebaseAnalyticsObserver(analytics: analytics),
@@ -108,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Navigator.pushNamed(context, "/order");
           },
           tooltip: 'Current order',
-          child: new Icon(Icons.list),
+          child: new Icon(Icons.shopping_cart),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
         bottomNavigationBar: BottomAppBar(
