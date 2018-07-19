@@ -1,10 +1,122 @@
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-<title>
-  Download
-</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+
+  <title>JustYip (จัสหยิบ)</title>
 </head>
- 
+
 <body>
-  <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kamontat/kcapstone-final-project/master/dist/ios/app/manifest.plist">Download app</a>
+  <div class='container-fluid'>
+    <div class="accordion" id="oneonezero">
+      <div class="card">
+        <div class="card-header" id="headingOneonezero">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneonezero" aria-expanded="true"
+              aria-controls="collapseOneonezero">
+              v1.1.0 (3)
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOneonezero" class="collapse show" aria-labelledby="headingOneonezero" data-parent="#oneonezero">
+          <div class="card-body">
+            First release application.
+            <p class="card-text">Did you know that average people in Bangkok spend at least
+              <b>65 hours a year waiting in line</b> to get food? JustYip allow users to order ahead and pick it up without
+              the needs to wait . Our free, intuitive platform can redefine your takeaway experience and save time for you
+              to do things that matter.
+            </p>
+
+            <p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#iOSModel">
+                For iOS
+              </button>
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#androidModel">
+                For Android
+              </button>
+            </p>
+
+            <small>
+              Designed and created for our heart ❤️ Kcapstone Team 3
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS Modal -->
+  <div class="modal fade" id="iOSModel" tabindex="-1" role="dialog" aria-labelledby="iOSModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="iOSModalLabel">Do you sure to download iOS application?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          This download link will be the iOS platform application. You may not able to download, that case will be the error of Apple
+          developer account.
+          <footer>
+            <small>
+              Stay tune, and calm.
+            </small>
+          </footer>
+        </div>
+        <div class="modal-footer">
+          <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kamontat/kcapstone-final-project/master/dist/ios/app/manifest.plist"
+            role="button" class="btn btn-primary">Download!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- android Modal -->
+  <div class="modal fade" id="androidModel" tabindex="-1" role="dialog" aria-labelledby="androidModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="androidModalLabel">Do you sure to download Android application?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          This application are signed by
+          <b>Kamontat Chantrachirathumrong</b> developer account. This download link will be
+          <i>apk</i> file, so you maybe need to enable
+          <a href="https://www.applivery.com/docs/troubleshooting/android-unknown-sources">install from unknown source</a> in your android smartphone.
+          <footer>
+            <small>
+              Stay tune, and calm.
+            </small>
+          </footer>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/kamontat/kcapstone-final-project/raw/master/dist/android/app.apk" role="button" class="btn btn-primary">Download!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
 </body>
+
+</html>
