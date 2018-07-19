@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kcapstone/components/datetimePicker.dart';
 import 'package:kcapstone/models/cart.dart';
 import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
@@ -21,6 +22,9 @@ class MenuPage extends StatefulWidget {
 }
 
 class MenuState extends State<MenuPage> {
+  DateTime date = DateTime.now();
+  TimeOfDay time = TimeOfDay.now();
+
   final Restaurant restaurant;
   Cart _cart;
 
@@ -131,27 +135,47 @@ class MenuState extends State<MenuPage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
-        tooltip: "ซื้อ",
         icon: _icon,
-        label: Text("ซื้อ"),
+        label: Text("ตั้งเวลา"),
         onPressed: () {
           print("Buy: " + _cart.toString());
           if (_cart.isOrderExist()) {
-            SingletonCart().add(_cart);
+            // FIXME: update this code
+            // https://marcinszalek.pl/flutter/flutter-fullscreendialog-tutorial-weighttracker-ii/
+            showModalBottomSheet(
+                context: context,
+                builder: (_) {
+                  return ListView(
+                    children: <Widget>[
+                      ListTile(
+                        leading: Icon(Icons.calendar_today),
+                        title: DateTimeItem(
+                          date: date,
+                          time: time,
+                          onChanged: (dateTime) => this.setState(() {
+                                print(dateTime);
 
-            showDialog(
-              context: context,
-              builder: (_) {
-                return Container(
-                  child: Row(),
-                );
-              },
-            );
+                                date = dateTime;
+                                time = TimeOfDay.fromDateTime(dateTime);
 
-            // TODO: Add timer
+                                _cart.setTime(dateTime);
+                              }),
+                        ),
+                      ),
+                      FlatButton.icon(
+                        onPressed: () {
+                          SingletonCart().add(_cart);
+
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => Payment()));
+                        },
+                        icon: Icon(Icons.add),
+                        label: Text("ซื้อ"),
+                      ),
+                    ],
+                  );
+                });
             // _cart.setTime(dt);
-//            Navigator.push(
-//                context, MaterialPageRoute(builder: (_) => Payment()));
           } else {
             showModalBottomSheet(
               context: context,
