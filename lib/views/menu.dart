@@ -2,12 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/datetimePicker.dart';
+import 'package:kcapstone/components/datetimeDialog.dart';
 import 'package:kcapstone/models/cart.dart';
 import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
-
-import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 import 'package:kcapstone/views/payment.dart';
 
 class MenuPage extends StatefulWidget {
@@ -22,13 +20,21 @@ class MenuPage extends StatefulWidget {
 }
 
 class MenuState extends State<MenuPage> {
-  DateTime date = DateTime.now();
-  TimeOfDay time = TimeOfDay.now();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  TextEditingController _textEditingController;
 
   final Restaurant restaurant;
   Cart _cart;
 
+  String _note;
+
   Icon _icon = Icon(Icons.timer);
+
+  @override
+  void initState() {
+    _textEditingController = new TextEditingController(text: _note);
+    super.initState();
+  }
 
   // In the constructor, require a restaurant
   MenuState({@required this.restaurant}) {
@@ -136,46 +142,13 @@ class MenuState extends State<MenuPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
         icon: _icon,
-        label: Text("ตั้งเวลา"),
+        label: Text("ตั้งค่าการซื้อ"),
         onPressed: () {
           print("Buy: " + _cart.toString());
           if (_cart.isOrderExist()) {
             // FIXME: update this code
             // https://marcinszalek.pl/flutter/flutter-fullscreendialog-tutorial-weighttracker-ii/
-            showModalBottomSheet(
-                context: context,
-                builder: (_) {
-                  return ListView(
-                    children: <Widget>[
-                      ListTile(
-                        leading: Icon(Icons.calendar_today),
-                        title: DateTimeItem(
-                          date: date,
-                          time: time,
-                          onChanged: (dateTime) => this.setState(() {
-                                print(dateTime);
-
-                                date = dateTime;
-                                time = TimeOfDay.fromDateTime(dateTime);
-
-                                _cart.setTime(dateTime);
-                              }),
-                        ),
-                      ),
-                      FlatButton.icon(
-                        onPressed: () {
-                          SingletonCart().add(_cart);
-
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => Payment()));
-                        },
-                        icon: Icon(Icons.add),
-                        label: Text("ซื้อ"),
-                      ),
-                    ],
-                  );
-                });
-            // _cart.setTime(dt);
+            _openAddEntryDialog();
           } else {
             showModalBottomSheet(
               context: context,
@@ -198,4 +171,16 @@ class MenuState extends State<MenuPage> {
       ),
     );
   }
+
+  Future _openAddEntryDialog() async {
+    Navigator.of(context).push(
+          MaterialPageRoute<DateTime>(
+              builder: (BuildContext context) {
+                return DateTimeDialog.add(DateTime.now(), _cart);
+              },
+              fullscreenDialog: true),
+        );
+  }
 }
+
+class WeightEntry {}

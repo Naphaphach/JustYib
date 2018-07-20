@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:kcapstone/models/card.dart';
 import 'package:kcapstone/models/menu.dart';
 import 'package:kcapstone/models/restaurant.dart';
@@ -18,6 +19,8 @@ class Cart {
   Cart(this._restaurant) {
     this._menus = Map();
     this._status = Status.none;
+
+    this._pickup = DateTime.now();
   }
 
   add(Menu menu, int number) {
@@ -74,10 +77,6 @@ class Cart {
   setPayment(CreditCard payment) {
     this.payment = payment;
     // SingletonCart().add(this);
-  }
-
-  setTime(DateTime time) {
-    this._pickup = time;
   }
 
   /// set to waiting
@@ -146,6 +145,18 @@ class Cart {
 
   Status getRawStatus() {
     return _status;
+  }
+
+  DateTime getDate() {
+    return _pickup;
+  }
+
+  TimeOfDay getTime() {
+    return TimeOfDay.fromDateTime(_pickup);
+  }
+
+  setTime(DateTime dt) {
+    _pickup = dt;
   }
 }
 
