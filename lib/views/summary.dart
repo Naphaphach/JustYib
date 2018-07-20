@@ -62,28 +62,33 @@ class SummaryState extends State<Summary> {
     if (cart.isStatus(Status.none)) {
       list.add(Padding(
         padding: EdgeInsets.only(top: 10.0),
-        child: MaterialButton(
-          height: 56.0,
-          color: ThemeData.light().primaryColor,
-          highlightColor: Colors.transparent,
-          child: Text("จ่ายเงิน"),
-          onPressed: () {
-            print("paid -- done!");
-            cart.order();
-            Navigator.popUntil(context, ModalRoute.withName('/'));
-            Navigator.pushNamed(context, "/order");
-          },
-          padding: EdgeInsets.symmetric(vertical: 7.0),
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+          child: MaterialButton(
+            height: 56.0,
+            color: Colors.redAccent,
+            highlightColor: Colors.transparent,
+            child: Text("จ่ายเงิน"),
+            textColor: Colors.white,
+            onPressed: () {
+              print("paid -- done!");
+              cart.order();
+              Navigator.popUntil(context, ModalRoute.withName('/'));
+              Navigator.pushNamed(context, "/order");
+            },
+            padding: EdgeInsets.symmetric(vertical: 7.0),
+          ),
         ),
       ));
 
       list.add(Padding(
-        padding: EdgeInsets.symmetric(vertical: 10.0),
+        padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
         child: MaterialButton(
           height: 56.0,
-          color: ThemeData.light().errorColor,
-          highlightColor: Colors.transparent,
+          color: Colors.white,
+          //highlightColor: Colors.transparent,
           child: Text("ยกเลิก"),
+          textColor: Colors.black,
           onPressed: () {
             print("cancel!");
             SingletonCart().cancelCurrentCart();

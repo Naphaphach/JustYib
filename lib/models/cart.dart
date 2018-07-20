@@ -39,6 +39,7 @@ class Cart {
       int current = _menus.putIfAbsent(menu, () => 0);
       if (current > 0) {
         number = current - number;
+        _menus[menu] = number;
       } else {
         _menus.remove(menu);
       }
