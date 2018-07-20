@@ -121,6 +121,31 @@
 						<string>Kasetsart University (Office of Computer Services)</string>
 					</dict>
 				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>977DF1999A44953B6740F4433D0067934FCD4B2D</string>
+						<key>dateExpires</key>
+						<string>12/5/19</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>package_info.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>RT44NCJNJ3</string>
+						<key>name</key>
+						<string>Kasetsart University (Office of Computer Services)</string>
+					</dict>
+				</dict>
 			</array>
 			<key>entitlements</key>
 			<dict>
