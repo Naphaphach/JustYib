@@ -1,10 +1,10 @@
 [
   {
     "picture": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Koi_The.jpg",
-    "name": "KOI THE",
+    "name": "KOI Thé",
     "distance": 760,
     "location": "สยามพารากอน",
-    "price": "50-100",
+    "price": "$",
     "queue": 4,
     "menus": [
       {
@@ -74,7 +74,7 @@
     "name": "Thipsamai",
     "distance": 2400,
     "location": "ประตูผี",
-    "price": "50-350",
+    "price": "$ $",
     "queue": 9,
     "menus": [
       {
@@ -116,103 +116,11 @@
     ]
   },
   {
-    "picture": "http://www.stickpng.com/assets/images/5842f062a6515b1e0ad75b15.png",
-    "name": "Subway",
-    "distance": 300,
-    "location": "สยามเซ็นเตอร์",
-    "price": "100-250",
-    "queue": 10,
-    "menus": [
-      {
-        "picture": "http://hackthemenu.com/wp-content/uploads/2013/08/subway-pizza-sub.jpg",
-        "name": "Pizza Sub",
-        "description": "ได้รับแรงบันดาลใจจากขนมปัง Hoagie ที่ทำให้ฟิลาเดเฟียมีชื่อโด่งดังมาแล้ว สเต็กและชีสของเราทำจากเสต็กเนื้อนุ่มชุ่มฉ่ำสไลด์เป็นชิ้นๆ คลุกเคล้ากับหัวหอมและพริกฝรั่ง วางทับด้วยชีสอบจนฉ่ำเยิ้ม แซนด์วิชนี้เสิร์ฟร้อนๆ พร้อมกับ ผักสดกรอบตามใจชอบโรยด้วยเครื่องปรุง เสิร์ฟพร้อมกับขนมปังอบสดใหม่",
-        "price": 210
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-SweetOnionChickenTeriyaki.jpg",
-        "name": "Sweet Onion Chicken Teriyaki",
-        "description": "รู้สึกเหมือนอยากทานไก่มั้ยล่ะ? ถ้าเช่นนั้นมาลองลิ้มรสอกไก่อบของเรา เราใช้แต่เนื้ออกไก่นุ่มล้วนๆ อบร้อนๆ รสเลิศ ตามด้วยผักสดกรอบตามใจชอบ โรยหน้าด้วยเครื่องปรุงที่เสริฟมาพร้อมกับขนมปังอบสดใหม่ เหมือนกับที่แม่เคยทำเลยแหละ",
-        "price": 145
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-spcyital.jpg",
-        "name": "Spicy Italian",
-        "description": "เพิ่มรสชาติให้น่าลิ้มลองมากขึ้นด้วย 4 องค์ประกอบอันล้นเหลือของ ไส้กรอกซาลามี่ เปปเปอโรนี่ ชีส และผักสดกรอบตามใจชอบพร้อมราดด้วยซอสพริกและซอสอื่นๆของ ซับเวย์ ที่ท่านชื่นชอบ",
-        "price": 135
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/allsandiwhces_cbrm_PT.jpg",
-        "name": "Chicken & Bacon Ranch Melt",
-        "description": "ทำจากแฮมแสนอร่อยรสเลิศและแฮมไก่ สไลด์เป็นแผ่นๆ ตามด้วยผักสดกรอบที่ท่านชื่นชอบ ราดด้วยซอสหลากหลายรส ช่างเป็นการผสมผสานเยี่ยมยอดจริงๆ",
-        "price": 165
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/W2B_Subway.com_Silos_ProductMenu_234x140_Meatball_PT.jpg",
-        "name": "Meatball Marinara",
-        "description": "เมนูสุดคลาสสิกของชาวเอเชีย – ทำจากชิ้นไก่เนื้อนุ่ม คลุกเคล้ากับซอสเทอริยากิเบาบาง เสิร์ฟร้อนๆ โรยหน้าด้วยผักสดกรอบและเครื่องปรุงตามใจชอบบนขนมปังอบสดใหม่",
-        "price": 130
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-RoastBeef.jpg",
-        "name": "Roast Beef",
-        "description": "ซับเวย์ คลับ เป็นแซนด์วิชอีกแบบหนึ่งที่น่าลิ้มลอง รสชาติที่ชวนรับประทานด้วยการผสมผสานของเนื้อไก่เนื้อนุ่มล้วนๆ ที่เลื่องชื่อของเรา, แฮมไก่, เนื้ออบ สไลด์เป็นชิ้นๆ และแฮมรสเลิศตามด้วยผักสดกรอบตามใจชอบและตามด้วยเครื่องปรุงที่เสิร์ฟมาบนขนมปังอบสดใหม่ของเรา",
-        "price": 190
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/W2B_Subway.com_Silos_ProductMenu_234x140_Tuna_PT.jpg",
-        "name": "Classic Tuna",
-        "description": "ปลาทูน่าและครีมมายองเนสผสมผสานเข้าด้วยกันอย่างลงตัวเพื่อรังสรรค์เป็นอาหารรสเลิศเป็นที่ชื่นชอบกันทั่วโลก แซนด์วิชทูน่าที่ท่านสามารถเลือกเติมด้วยผักสดกรอบและเครื่องปรุงโรยหน้าต่างๆ เสิร์ฟบนขนมปังปิ้งใหม่ๆ",
-        "price": 155
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/menu-category-sandwich-TurkeyBreast.jpg",
-        "name": "Turkey Breast",
-        "description": "ไส้กรอกซาลามี่ (Salami) ที่มีรสชาติขึ้นชื่อมาเป็นเวลานานจากเจนัวหั่นบางๆ ตามติดด้วย เปปเปอโรนี่ (Pepperoni) และแฮม พร้อมด้วยผักสดตามที่ท่านต้องการ และโรยหน้าด้วยเครื่องปรุง เสิร์ฟบนขนมปังอบร้อนๆ มีบางคน กล่าว ว่า B.M.T.™  มีความโดดเด่น ด้วยขนาดใหญ่ที่สุด เนื้อเยอะที่สุด และรสชาติที่ดีที่สุด เราไม่เห็นด้วยไม่ได้แล้ว",
-        "price": 150
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/W2_Subway.com_Silo_Steak-Cheese_6In_234-140_PT.jpg",
-        "name": "Steak & Cheese",
-        "description": "ปรุงจากแฮมและแฮมไก่สไลด์เป็นแผ่นๆ รสชาติแสนอร่อย เสิร์ฟพร้อมกับผักสดกรอบราดด้วยเครื่องปรุงตามใจชอบ – ช่างเป็นการผสมผสานที่ลงตัวจริงๆ",
-        "price": 165
-      },
-      {
-        "picture": "http://www.subway.com/ns/images/menu/USA/ENG/allsandiwhces_coldcut_PT.jpg",
-        "name": "Cold Cut Combo",
-        "description": "เป็นการผสมผสานผักสดกรอบจากสวน เช่น ผักกาดแก้วสดๆ มะเขือเทศ พริกฝรั่ง หัวหอม ราดหน้าด้วยเครื่องปรุงรสเลิศ เสิร์ฟพร้อมกับขนมปังอบสดใหม่ เหมือนกับแซนด์วิชสลัดผักสด ยังไงยังนั้นเลย",
-        "price": 140
-      }
-    ]
-  },
-  {
-    "picture": "http://th.theshoppesgrandrama9.com/public/uploads/shop_list/17_True_Coffee1.jpg",
-    "name": "True Coffee",
-    "distance": 100,
-    "location": "สยามเซ็นเตอร์",
-    "price": "100-250",
-    "queue": 0,
-    "menus": [
-      {
-        "picture": "http://truecoffee.truecorp.co.th/wordpress/wp-content/uploads/2013/04/Ice-Velvet-Chocolate-s_r.jpg",
-        "name": "Iced Velvet Chocolate",
-        "description": "เครื่องดื่มช็อคโกแลตตัวใหม่ที่ TrueCoffee เสนอให้ผู้ที่หลงใหล ในช็อคโกแลตด้วยรสชาติที่มีความเข้มข้น และความนุ่มนวนจากช็อคโกแลตแท้ผสมเข้ากับนมสด พร้อมราดวิปครีมและผงโกโก้ด้านบน",
-        "price": 210
-      },
-      {
-        "picture": "http://truecoffee.truecorp.co.th/wordpress/wp-content/uploads/2013/04/Caramel-Macchiato-S_r.jpg",
-        "name": "Iced Caramel Macchiato",
-        "description": "เครื่องดื่มที่บรรจงผสมผสานไว้ด้วยความหอมหวานของน้ำเชื่อมวนิลา นมสดร้อนและโฟมนมเนียนนุ่ม พร้อมราดช็อตเอสเพรสโซ่จากด้านบน ตกแต่งด้วยคาราเมลซอสที่รสชาติหอมจนคุณสัมผัสได้ถึงความลงตัวของกาแฟแก้วนี้",
-        "price": 145
-      }
-    ]
-  },
-  {
     "picture": "https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.0-9/22851794_1419003284885064_986008501436137034_n.jpg?_nc_cat=0&oh=35494582d96cf5946f6d3d6824fa72df&oe=5BD405C9",
     "name": "Sweet Circle",
     "distance": 800,
     "location": "สวนหลวงแสควร์",
-    "price": "$ $",
+    "price": "$ $ $",
     "queue": 0,
     "menus": [
       {
@@ -309,7 +217,7 @@
         "picture": "https://img.wongnai.com/p/400x0/2017/08/17/5811e1d239cc4c7d96622fa28ffef06d.jpg",
         "name": "Banoffee Pint",
         "description": "ช็อคโกแล็ตปั่นกับกล้วย ด้านบนตกแต่งด้วยวิปครีม กล้วยหั่นเป็นแว่น และคุกกี้ เครื่องดื่มรสหอมหวาน มีกลิ่นกล้วยเป็นเอกลักษณ์",
-        "price": 65 
+        "price": 65
       }
     ]
   },
@@ -326,6 +234,34 @@
         "name": "โจ๊ก เครื่องใน/หมูสับ/ใสไข่",
         "description": "lklakhdkhfkljhaskdjhflkjhsdlfkhlksadhflkjhslkjdhflkjlhlkasdfhlkjhslakjhdf",
         "price": 50
+      }
+    ]
+  },
+  {
+    "picture": "https://www.ryoiireview.com/upload/article/201705/1495442772_44e442d997186017cdcfb8e420508eff.jpg",
+    "name": "ประจักษ์เป็ดย่าง บางรัก",
+    "distance": 1100,
+    "location": "บางรัก",
+    "price": "$",
+    "queue": 3,
+    "menus": [
+      {
+        "picture": "https://img.wongnai.com/p/984x0/2018/03/17/4d1c0da09aa64a37bedef6496bee9494.jpg",
+        "name": "เป็ดย่างครึ่งตัว",
+        "description": "lklakhdkhfkljhaskdjhflkjhsdlfkhlksadhflkjhslkjdhflkjlhlkasdfhlkjhslakjhdf",
+        "price": 250
+      },
+      {
+        "picture": "https://www.ryoiireview.com/upload/article/201707/1500978718_71ac67d7ea8c58b6e9527c3b479f4256.jpg",
+        "name": "ข้าวหน้าเป็ด",
+        "description": "lklakhdkhfkljhaskdjhflkjhsdlfkhlksadhflkjhslkjdhflkjlhlkasdfhlkjhslakjhdf",
+        "price": 40
+      },
+      {
+        "picture": "https://www.ryoiireview.com/upload/article/201707/1500978718_71ac67d7ea8c58b6e9527c3b479f4256.jpg",
+        "name": "บะหมี่เป็ดย่าง",
+        "description": "lklakhdkhfkljhaskdjhflkjhsdlfkhlksadhflkjhslkjdhflkjlhlkasdfhlkjhslakjhdf",
+        "price": 45
       }
     ]
   }
