@@ -18,9 +18,7 @@ class MyApp extends StatelessWidget {
 
     return new MaterialApp(
       title: 'Just-Yib',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: new ThemeData(),
       home: new MyHomePage(title: 'Just-Yib'),
       navigatorObservers: [
         new FirebaseAnalyticsObserver(analytics: analytics),
