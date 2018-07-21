@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "26213418269",
-    "firebase_url": "https://kcapstone-final-project.firebaseio.com",
-    "project_id": "kcapstone-final-project",
-    "storage_bucket": "kcapstone-final-project.appspot.com"
+    "project_number": "1078099300102",
+    "firebase_url": "https://justyibofficial.firebaseio.com",
+    "project_id": "justyibofficial",
+    "storage_bucket": "justyibofficial.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:26213418269:android:3c19e2986175b7ee",
+        "mobilesdk_app_id": "1:1078099300102:android:a3e161e958945f09",
         "android_client_info": {
           "package_name": "com.kamontat.justyib"
         }
       },
       "oauth_client": [
         {
-          "client_id": "26213418269-01r1l3q45op4vhqjhoapc94r9pg2pol6.apps.googleusercontent.com",
+          "client_id": "1078099300102-8h7b1mfirshn3klfi007cppsq9soh0l7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAg_VaPhCPHlWRGtkkfrtYpKcLvaofuPGc"
+          "current_key": "AIzaSyBCWrBjkYTEsraA7Lxpi8njj6zDpKcerPg"
         }
       ],
       "services": {

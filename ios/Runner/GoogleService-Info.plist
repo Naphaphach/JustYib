@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>26213418269-1pbl2ljm2ps1cstk7hajp50jbh6q7c95.apps.googleusercontent.com</string>
+	<string>1078099300102-gc8b9kkkd869hknod33p97v8ig9vhl2t.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.26213418269-1pbl2ljm2ps1cstk7hajp50jbh6q7c95</string>
+	<string>com.googleusercontent.apps.1078099300102-gc8b9kkkd869hknod33p97v8ig9vhl2t</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCTjX8dwCmg9XrDJbR1GryOIfA0sUlQjhw</string>
+	<string>AIzaSyD_TYduiGV0E61cyXHZnWDR57HVyz096OM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>26213418269</string>
+	<string>1078099300102</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.kamontat.justyib</string>
 	<key>PROJECT_ID</key>
-	<string>kcapstone-final-project</string>
+	<string>justyibofficial</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kcapstone-final-project.appspot.com</string>
+	<string>justyibofficial.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:26213418269:ios:3c19e2986175b7ee</string>
+	<string>1:1078099300102:ios:a3e161e958945f09</string>
 	<key>DATABASE_URL</key>
-	<string>https://kcapstone-final-project.firebaseio.com</string>
+	<string>https://justyibofficial.firebaseio.com</string>
 </dict>
 </plist>
