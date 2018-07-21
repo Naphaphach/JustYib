@@ -1,5 +1,5 @@
 ---
-title: Application versions
+title: Android application versions
 ---
 
 | Version   | Feature           | Android | iOS |
