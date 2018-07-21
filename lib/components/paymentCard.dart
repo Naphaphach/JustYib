@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/card.dart';
+import 'package:justyib/models/card.dart';
 
 class PaymentCard extends StatelessWidget {
   final CreditCard creditCard;

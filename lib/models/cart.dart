@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/card.dart';
-import 'package:kcapstone/models/menu.dart';
-import 'package:kcapstone/models/restaurant.dart';
-import 'package:kcapstone/constants/status.dart';
+import 'package:justyib/models/card.dart';
+import 'package:justyib/models/menu.dart';
+import 'package:justyib/models/restaurant.dart';
+import 'package:justyib/constants/status.dart';
 
 class Cart {
   Restaurant _restaurant;

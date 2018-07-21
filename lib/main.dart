@@ -1,11 +1,11 @@
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
 
-import 'package:kcapstone/views/order.dart';
-import 'package:kcapstone/views/foryou.dart';
-import 'package:kcapstone/views/home.dart';
-import 'package:kcapstone/views/profile.dart';
-import 'package:kcapstone/views/setting.dart';
+import 'package:justyib/views/order.dart';
+import 'package:justyib/views/foryou.dart';
+import 'package:justyib/views/home.dart';
+import 'package:justyib/views/profile.dart';
+import 'package:justyib/views/setting.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() => runApp(new MyApp());

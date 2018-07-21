@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/restaurant.dart';
-import 'package:kcapstone/views/menu.dart';
+import 'package:justyib/models/restaurant.dart';
+import 'package:justyib/views/menu.dart';
 
 class CatalogList extends StatelessWidget {
   final List<Restaurant> catalog;

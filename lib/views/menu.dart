@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/datetimeDialog.dart';
-import 'package:kcapstone/models/cart.dart';
-import 'package:kcapstone/models/menu.dart';
-import 'package:kcapstone/models/restaurant.dart';
-import 'package:kcapstone/views/payment.dart';
+import 'package:justyib/components/datetimeDialog.dart';
+import 'package:justyib/models/cart.dart';
+import 'package:justyib/models/menu.dart';
+import 'package:justyib/models/restaurant.dart';
+import 'package:justyib/views/payment.dart';
 
 class MenuPage extends StatefulWidget {
   final Restaurant restaurant;

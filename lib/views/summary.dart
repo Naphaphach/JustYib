@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/paymentCard.dart';
-import 'package:kcapstone/components/priceCard.dart';
-import 'package:kcapstone/components/purchaseMenu.dart';
-import 'package:kcapstone/models/card.dart';
-import 'package:kcapstone/models/cart.dart';
-import 'package:kcapstone/constants/status.dart';
+import 'package:justyib/components/paymentCard.dart';
+import 'package:justyib/components/priceCard.dart';
+import 'package:justyib/components/purchaseMenu.dart';
+import 'package:justyib/models/cart.dart';
+import 'package:justyib/constants/status.dart';
 
 class Summary extends StatefulWidget {
   final Cart cart;

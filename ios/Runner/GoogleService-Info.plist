@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kamontat.kcapstone</string>
+	<string>com.kamontat.justyib</string>
 	<key>PROJECT_ID</key>
 	<string>kcapstone-final-project</string>
 	<key>STORAGE_BUCKET</key>

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/menu.dart';
+import 'package:justyib/models/menu.dart';
 
 class PurchaseMenuCard extends StatelessWidget {
   final int index;

@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:kcapstone/models/cart.dart';
-import 'package:kcapstone/views/payment.dart';
+import 'package:justyib/models/cart.dart';
+import 'package:justyib/views/payment.dart';
 import 'package:meta/meta.dart';
 
 // import 'package:numberpicker/numberpicker.dart';

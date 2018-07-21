@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/cartList.dart';
-import 'package:kcapstone/models/cart.dart';
-import 'package:kcapstone/views/history.dart';
+import 'package:justyib/components/cartList.dart';
+import 'package:justyib/models/cart.dart';
+import 'package:justyib/views/history.dart';
 
-import 'package:kcapstone/views/summary.dart';
+import 'package:justyib/views/summary.dart';
 
 class Order extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/catalog.dart';
-import 'package:kcapstone/models/restaurant.dart';
+import 'package:justyib/components/catalog.dart';
+import 'package:justyib/models/restaurant.dart';
 
 import 'package:http/http.dart' as http;
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/creditCardList.dart';
-import 'package:kcapstone/models/card.dart';
-import 'package:kcapstone/models/cart.dart';
-import 'package:kcapstone/models/menu.dart';
+import 'package:justyib/components/creditCardList.dart';
+import 'package:justyib/models/card.dart';
+import 'package:justyib/models/cart.dart';
+import 'package:justyib/models/menu.dart';
 
 import 'package:http/http.dart' as http;
-import 'package:kcapstone/models/restaurant.dart';
+import 'package:justyib/models/restaurant.dart';
 
 class Payment extends StatefulWidget {
   @override

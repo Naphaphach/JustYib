@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/components/cartList.dart';
-import 'package:kcapstone/models/cart.dart';
+import 'package:justyib/components/cartList.dart';
+import 'package:justyib/models/cart.dart';
 
 class History extends StatelessWidget {
   @override

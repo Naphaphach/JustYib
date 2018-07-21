@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/cart.dart';
-import 'package:kcapstone/views/summary.dart';
+import 'package:justyib/models/cart.dart';
+import 'package:justyib/views/summary.dart';
 
 class CartList extends StatelessWidget {
   Cart _cart;

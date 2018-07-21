@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcapstone/models/profile.dart';
+import 'package:justyib/models/profile.dart';
 
 import 'package:http/http.dart' as http;
 
