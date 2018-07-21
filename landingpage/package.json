@@ -1,0 +1,17 @@
+{
+  "name": "justyib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kamontat Chantrachirathumrong",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "vuepress": "^0.12.0"
+  },
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build",
+    "deploy": "yarn build && gh-pages -d .vuepress/dist"
+  }
+}
