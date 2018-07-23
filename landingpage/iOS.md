@@ -1,11 +1,31 @@
 ---
-title: iOS application versions
-footer: MIT Licensed | Copyright © 2018-present Evan You
+title: โปรแกรม iOS 
+lang: th-TH
 ---
 
-| Version   | Feature           | Android | iOS |
-|-----------|-------------------|---------|----------|
-| 2.1.0 (5) | Icon and colors   | [download](https://github.com/kamontat/kcapstone-final-project/raw/v1.0.1/dist/android/app.apk) | <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kamontat/kcapstone-final-project/v2.1.0/dist/ios/app/manifest.plist" role="button" class="btn btn-primary">download</a> |
-| 2.0.0 (4) | Timer and history | [download](https://github.com/kamontat/kcapstone-final-project/raw/v2.0.0/dist/android/app.apk) | <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kamontat/kcapstone-final-project/v2.0.0/dist/ios/app/manifest.plist" role="button" class="btn btn-primary">download</a> |
-| 1.0.1 (1) | Buy and payment   | [download](https://github.com/kamontat/kcapstone-final-project/raw/v2.1.0/dist/android/app.apk) | <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kamontat/kcapstone-final-project/v1.0.1/dist/ios/app/manifest.plist" role="button" class="btn btn-primary">download</a> |
+# โปรแกรมในระบบ iOS 
 
+เนื่องจากปัญหาและความล่าช้าในการพัฒนาโปรแกรม ทำให้ไม่สามารถส่งโปรแกรมได้ทันเวลา
+จึงมีแค่ หน้าจอที่ถูกถ่ายมาให้ลองดูเท่านั้น
+
+*ขอโทษในความล่าช้าที่เกิดขึ้น* ทีมงาน JustYib
+
+[[toc]]
+
+## หน้าหลัก
+
+![first](./assets/first-screen.png)
+
+## หน้าจ่ายเงิน
+
+![second](./assets/payment-screen.png)
+
+## หน้าเลือกเวลา
+
+![third](./assets/timer-screen.png)
+
+## หน้าสินค้าของฉัน
+
+![fourth](./assets/order-screen.png)
+
+<FooterTh />
