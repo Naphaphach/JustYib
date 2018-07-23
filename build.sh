@@ -10,12 +10,16 @@
 
 ! command -v "flutter" && echo "flutter must need" && exit 1
 
+flutter clean
+
 flutter build apk --release || exit $?
 
 test -f "./dist/android/app.apk" &&
   rm -rf ./dist/android/app.apk
 
 cp -r ./build/app/outputs/apk/release/app-release.apk ./dist/android/app.apk || exit $?
+
+git add -f "dist/android/app.apk"
 
 echo "Build Android complete"
 
