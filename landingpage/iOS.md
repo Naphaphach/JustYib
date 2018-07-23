@@ -1,5 +1,6 @@
 ---
 title: iOS application versions
+footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
 | Version   | Feature           | Android | iOS |
